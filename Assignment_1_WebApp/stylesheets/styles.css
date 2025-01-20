@@ -1,0 +1,37 @@
+#Header{
+    background-image: url("images/Londis_DeliBar.jpg");
+
+}
+.logo{
+    align-content: end;
+    background: #206320;
+    font-family: Harrington, cursive;
+    padding: 10px;
+    padding-left: 22px;
+    width: 160px;
+    border-radius: 10px;
+    border: aliceblue 5px solid;
+}
+.logo:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+.logo img{
+    max-height: 50px;
+    width: auto;
+}
+.logo h1{
+    color: white;
+    font-size: 20px;
+}
+.nav{
+    align-content: end;
+}
+
+#Content{
+
+}
+
+#Footer{
+
+}
