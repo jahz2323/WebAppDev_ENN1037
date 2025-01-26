@@ -1,37 +1,148 @@
-#Header{
-    background-image: url("images/Londis_DeliBar.jpg");
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box;
+}
+#logo, #logo img {
+    width: 100px;
+    height: auto;
+    object-fit: scale-down;
+    left: 0;
+}
+.nav {
+    color: black;
+    /*border: black solid 3px;*/
+    background: #FFFFFF;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    align-items: center;
+}
 
+.nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 2px;
+    padding-right: 20px;
 }
-.logo{
-    align-content: end;
-    background: #206320;
-    font-family: Harrington, cursive;
-    padding: 10px;
-    padding-left: 22px;
-    width: 160px;
-    border-radius: 10px;
-    border: aliceblue 5px solid;
+
+.nav ul li a {
+    color: black;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Lato, sans-serif;
 }
-.logo:hover{
+
+.nav ul, .nav li:hover, .nav.a:hover {
+    transition: all .5s;
     transform: scale(1.1);
-    transition-duration: 0.5s;
-}
-.logo img{
-    max-height: 50px;
-    width: auto;
-}
-.logo h1{
-    color: white;
-    font-size: 20px;
-}
-.nav{
-    align-content: end;
 }
 
-#Content{
-
+#content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 20px;  /* Add some padding to give space inside the container */
+    box-sizing: border-box;  /* Make sure padding doesn't affect width */
+}
+#Content p {
+    color: black;
+    font-family: Lato, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 2px;
 }
 
-#Footer{
+.img_container {
+    background-image: url(../images/Londis_Front.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    border: #bbbbbb solid 3px;
+    border-radius: 10px;
+    height: 400px;
+    width: 100%;
+    float: none;
+    align-content: center;
+    text-align: center;
+    margin-bottom: 40px
+}
+
+.img_container h1 {
+    margin: auto;
+    text-align: center;
+    color: aliceblue;
+    font-family: Lato, sans-serif;
+    font-size: 30px;
+}
+
+.ShopNow{
+    display: inline-block;
+    margin: 55px;
+    text-align: center;
+}
+.ShopNow a:link, .ShopNow a:visited{
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: black 0px 1px 1px;
+    color: #ffffff;
+    width: 150px;
+    font-family: Lato, sans-serif;
+    font-size: 25px;
+}
+.ShopNow a:hover {
+    transition: all .5s;
+    transform: scale(1.1);
+    color: #b9b9b9;
+    box-shadow: #FFFFFF 2px 1px 10px;
 
 }
+.Featured{
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;    /* Add spacing */
+    background-color: #f8f9fa; /* Optional: Add a background */
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+#DeliBar{
+    border: #bbbbbb solid 3px;
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+
+}
+.Reviews {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    line-height: 25px;
+    gap: 1px;
+}
+
+.Reviews img {
+    width: 150px;
+    height: 150px;
+    border: #1f1e1e ridge 2px;
+    border-radius: 100px;
+}
+
+.Reviews h3, .Reviews h4, .Reviews h5, .Reviews h6 {
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    color: #7777ff;
+}
+
+.Reviews p {
+    font-family: Lato, sans-serif;
+    width: 65%;
+}
+
+footer div {
+    text-align: center;
+    flex: 1;
+}
+
