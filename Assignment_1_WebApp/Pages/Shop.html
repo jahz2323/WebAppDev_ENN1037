@@ -3,38 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <title>Shop</title>
-    <link rel="stylesheet" href="../stylesheets/Shop.css"></link>
+    <link href="../stylesheets/Shop.css" rel="stylesheet"></link>
 </head>
 <body>
-<div id="Header">
-  <div class="nav">
+<div id="header">
     <div id="logo">
-      <a href="../index.html">
-        <img alt="logo" src="../images/Londis-Logo-Orange-Text-3868968363.jpg " style="width: 100px; height: auto;" ></img>
-      </a>
+        <a href="../index.html">
+            <img alt="Londis Logo" src="../images/Londis-Logo-Orange-Text-3868968363.jpg"
+                 style="width: 100px; height: auto;">
+        </a>
     </div>
-    <ul>
-      <li><a href="../Pages/Login.html" target="_blank">Login</a></li>
-      <li><a href="../Pages/Orders.html">Orders</a></li>
-      <li><a href="../Pages/About.html">About</a></li>
-    </ul>
-  </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="../Pages/Login.html" target="_blank">Login</a></li>
+            <li><a href="../Pages/Orders.html">Orders</a></li>
+            <li><a href="../Pages/About.html">About</a></li>
+        </ul>
+    </nav>
 </div>
 
 <div id="Content">
+    <div id="Shop_container">
+        <h1>Shop</h1>
+        <div id="Shop_header" style="display: flex; justify-content: center; align-items: center">
+            <img alt="Shop Image" src="../images/londis_Shop.jpg" style="width:70%;" ></img>
+        </div>
+        <div id="Shop_content">
+            <div id="Shop_nav">
+                <form action>
+                    <label for="Products"> Filter: </label>
+                    <select name="Products" id="Products" >
+                        <option value="General" selected>General</option>
+                        <option value="Beverages"> Beverages</option>
+                        <option value="Food"> Food</option>
+                        <option value="Snacks"> Snacks</option>
+                    </select>
+                </form>
+            </div>
+            <div id="Shop_products" style="margin: 40px; padding: 10px">
+                <div class="Shop_products_img">
+                    <img src="../images/ShopProducts/coca-cola-bottle-transparent-background-9-903137475.png" alt="coke">
+                    <h3>Coca Cola 500ml</h3>
+                    <p>2.49£</p>
+                    <button> Add to cart</button>
+                </div>
+                <div class="Shop_products_img">
+                    <img src="../images/ShopProducts/sprite_PNG8921-1557318537.png" alt="sprite">
+                    <h3>Sprite 500ml</h3>
+                    <p>2.49£</p>
+                    <button> Add to cart</button>
+                </div>
+                <div class="Shop_products_img">
+                    <img src="../images/ShopProducts/fanta_PNG46-3521308670.png" alt="fanta">
+                    <h3>Fanta 500ml</h3>
+                    <p>2.49£</p>
+                    <button> Add to cart</button>
+                </div>
+                <div class="Shop_products_img">
+                    <img src="../images/ShopProducts/Southern-fried-chicken-fillet-rolls-recipe-banner-2050362663.jpg" alt="fanta">
+                    <h3>Chicken Fillet Roll</h3>
+                    <p>3.49£</p>
+                    <button> Add to cart</button>
+                </div>
 
+            </div>
+        </div>
+    </div>
 </div>
 
 <div id="footer">
-  <div class="Socials">
-    <h1>Socials</h1>
-  </div>
-  <div class="Contact">
-    <h1>Contact</h1>
-  </div>
-  <div class="Legal">
-    <h1>Legal</h1>
-  </div>
+    <div class="Socials">
+        <h1>Socials</h1>
+    </div>
+    <div class="Contact">
+        <h1>Contact</h1>
+    </div>
+    <div class="Legal">
+        <h1>Legal</h1>
+    </div>
 </div>
 
 </body>
