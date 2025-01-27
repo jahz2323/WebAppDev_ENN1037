@@ -3,36 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <title>Orders</title>
+    <link href="../stylesheets/Orders.css" rel="stylesheet"></link>
 </head>
 <body>
-    <!-- Check if logged in : JS -->
-    <!-- Header  -->
-    <div id="header">
-        <div id="logo">
-            <a href="../index.html">
-                <img alt="Londis Logo" src="../images/Londis-Logo-Orange-Text-3868968363.jpg" style="width: 100px; height: auto;">
-            </a>
-        </div>
-        <nav class="nav">
-            <ul>
-                <li><a href="../Pages/Login.html" target="_blank">Login</a></li>
-                <li><a href="../Pages/Orders.html">Orders</a></li>
-                <li><a href="../Pages/About.html">About</a></li>
-            </ul>
-        </nav>
+<!-- Check if logged in : JS -->
+<!-- Header  -->
+<div id="header">
+    <div id="logo">
+        <a href="../index.html">
+            <img alt="Londis Logo" src="../images/Londis-Logo-Orange-Text-3868968363.jpg"
+                 style="width: 100px; height: auto;">
+        </a>
     </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="../Pages/Login.html" target="_blank">Login</a></li>
+            <li><a href="../Pages/Orders.html">Orders</a></li>
+            <li><a href="../Pages/About.html">About</a></li>
+        </ul>
+    </nav>
+</div>
 
-    <!-- Footer  -->
-    <div id="footer">
-        <div class="Socials">
-            <h1>Socials</h1>
+<div id="Content_H1" style="padding-left: 30px;">
+    <h1 style="color: white">Orders</h1>
+</div>
+<div id="content">
+    <div class="Shopping_cart">
+        <div class="column_labels">
+            <label class="Product_image">Image</label>
+            <label class="Product_details">Product</label>
+            <label class="Product_Price">Price</label>
+            <label class="Product_quantity">Quantity</label>
+            <label class="Product_Remove">Remove</label>
+            <label class="Product_total">Total</label>
         </div>
-        <div class="Contact">
-            <h1>Contact</h1>
+        <div class="Products">
+            <div class="Product_image">
+                <img src="../images/ShopProducts/coca-cola-bottle-transparent-background-9-903137475.png"
+                     style="width: 100px; height: auto;"
+            </div>
         </div>
-        <div class="Legal">
-            <h1>Legal</h1>
+        <div class="Product_details">
+            <h1> Coca Cola</h1>
+        </div>
+        <div class="Product_Price">
+            <p>£2.49</p>
+        </div>
+        <div class="Product_quantity">
+            <input id="quantity" max="10" min="1" name="quantity" type="number"></input>
+        </div>
+        <div class="Product_Remove">
+            <button class="Product_Button">Remove</button>
+        </div>
+        <div class="Product_total">
+            <p>£2.49</p>
         </div>
     </div>
+    <div class="totals">
+        <label>Grand Total</label>
+        <p>£2.49</p>
+    </div>
+    <button class="Checkout"> Checkout</button>
+</div>
+
+<!-- Footer  -->
+<div id="footer">
+    <div class="Socials">
+        <p>Follow us on </p>
+        <div class="social_media" style>
+            <img src="../images/facebook_logo.png" style="width: 50px; height: auto;"><img>
+            <img src="../images/twitter_logo.png" style="width: 50px; height: auto;"></img>
+            <img src="../images/instagram_logo.png" style="width: 50px; height: auto;"></img>
+        </div>
+    </div>
+    <div class="Contact">
+        <h1>Contact</h1>
+    </div>
+    <div class="Legal">
+        <h1>Legal</h1>
+    </div>
+</div>
 </body>
 </html>

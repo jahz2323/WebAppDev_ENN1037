@@ -1,0 +1,95 @@
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box;
+    background-image: url("../images/londis_Shop.jpg")
+}
+
+#header, #footer {
+    width: 100%;
+    background-color: #3a5c69;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: Lato, sans-serif;
+
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-right: 50px;
+}
+
+.nav ul li {
+    margin-left: 15px;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: transform 0.3s;
+}
+
+.nav ul, .nav li:hover, .nav.a:hover {
+    transition: all .5s;
+    transform: scale(1.1);
+}
+
+#content {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin: 20px;
+    /*position: relative;*/
+}
+
+.column_labels {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-family: Lato, sans-serif;
+    /* integrated class description*/
+    border: 1px ridge #3a5c69;
+    border-radius: 10px;
+    label {
+        padding: 30px;
+    }
+}
+.Shopping_cart{
+
+}
+.Products {
+    display: flex;
+}
+
+.Product_image, .Product_details, .Product_Price, .Product_quantity, .Product_Remove, .Product_total {
+    width: 350px;
+    padding: 10px;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-size: 10px;
+}
+
+.totals, .Checkout{
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+#footer div {
+
+    text-align: center;
+    margin-top: 10px;
+    flex: 1;
+}
