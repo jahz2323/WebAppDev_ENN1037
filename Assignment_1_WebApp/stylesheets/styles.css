@@ -145,8 +145,7 @@ body {
     width: 65%;
 }
 
-footer div {
+#footer div {
     text-align: center;
     flex: 1;
 }
-

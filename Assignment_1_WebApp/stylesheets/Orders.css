@@ -41,6 +41,7 @@ body {
 }
 
 #content {
+    min-height: 100vh;
     width: 100%;
     margin: 20px;
     background-image: url("../images/londis_Shop.jpg");
@@ -66,13 +67,15 @@ body {
     /*flex-direction: column;*/
     display: flex;
     justify-content: space-around;
-
 }
 
-.Product_image,.Product_details, .Product_Price, .Product_quantity, .Product_Remove, .Product_total{
-
+.Products{
+    display: flex;
+    justify-content: space-around;
 }
 #footer div {
     text-align: center;
     flex: 1;
+    height: auto;
+    width: 100%;
 }
