@@ -7,6 +7,7 @@
 </head>
 <body>
 <!-- Check if logged in : JS -->
+<!-- before orders - check if user session is logged in/ if not -> bring to login , else continue -->
 <!-- Header  -->
 <div id="header">
     <div id="logo">
@@ -23,12 +24,13 @@
         </ul>
     </nav>
 </div>
-
-<div id="Content_H1" style="padding-left: 30px;">
-    <h1 style="color: white">Orders</h1>
-</div>
 <div id="content">
+    <div id="Content_H1" style="padding-left: 30px;">
+        <h1 style="color: white">Orders</h1>
+    </div>
     <div class="Shopping_cart">
+        <h2>Order Summary</h2>
+        <!-- Order summary details -->
         <div class="column_labels">
             <label class="Product_image">Image</label>
             <label class="Product_details">Product</label>
@@ -40,7 +42,7 @@
         <div class="Products">
             <div class="Product_image">
                 <img src="../images/ShopProducts/coca-cola-bottle-transparent-background-9-903137475.png"
-                     style="width: 100px; height: auto;"
+                     alt="coke" style="width: 100px; height: auto;">
             </div>
         </div>
         <div class="Product_details">
@@ -58,12 +60,14 @@
         <div class="Product_total">
             <p>£2.49</p>
         </div>
+        <div class="totals">
+            <label>Grand Total</label>
+            <p>£2.49</p>
+        </div>
+        <button class="Checkout" onclick="">
+            <a href="Checkout.html" style="text-decoration-line: none;"> Checkout </a>
+        </button>
     </div>
-    <div class="totals">
-        <label>Grand Total</label>
-        <p>£2.49</p>
-    </div>
-    <button class="Checkout"> Checkout</button>
 </div>
 
 <!-- Footer  -->

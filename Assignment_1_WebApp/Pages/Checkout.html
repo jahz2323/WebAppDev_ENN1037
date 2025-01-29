@@ -2,9 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../stylesheets/Checkout.css"></link>
 </head>
 <body>
-
+<div id="header">
+    <div id="logo">
+        <a href="../index.html">
+            <img alt="Londis Logo" src="../images/Londis-Logo-Orange-Text-3868968363.jpg"
+                 style="width: 100px; height: auto;">
+        </a>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="../Pages/Login.html" target="_blank">Login</a></li>
+            <li><a href="../Pages/Orders.html">Orders</a></li>
+            <li><a href="../Pages/About.html">About</a></li>
+        </ul>
+    </nav>
+</div>
+<!-- user decides what time to collect,  -->
+<div id="content">
+    <h1>Checkout</h1>
+    <div id="checkout_container">
+        <div id="checkout_info">
+            <h1>How it works</h1>
+            <p>Select what time you want to collect your item from the timetable</p>
+            <p> <b>Note*</b> Collection prior to the time is acceptable but orders not collected after closing times will be refunded with a penalty fee</p>
+        </div>
+        <div id="checkout_timetable">
+            <!-- Real time update with day and time passed-->
+            <!-- This example will be for Friday -->
+            <!-- <li>Friday: 8 a.m.–9 p.m.</li> -->
+            <form action>
+                <label for="Timetable"> Select time: </label>
+                <!-- TIME INTERVAL 15 MIN  max 1 hr -->
+                <select name="Timetable" id="Timetable" >
+                    <option value="8AM">8:00</option>
+                    <option value="8:15 AM">8:15</option>
+                    <option value="8:30 AM">8:30</option>
+                    <option value="8:45">8:45</option>
+                    <option value="9AM">9:00</option>
+                </select>
+            </form>
+        </div>
+        <div id="transaction_container">
+            <h1>Payment method</h1>
+            <div class = "transaction_method">
+                <form action>
+                    <label for="Payment_method">Payment method: </label>
+                    <select name="Payment_method" id="Payment_method">
+                        <option value = "Cash">Cash</option>
+                        <option value = "Card">Card</option>
+                        <!-- If card is selected - check if revolute or mastercard -->
+                    </select>
+                </form>
+                <form id="payment_form">
+                    <label for="Card_number" >Card number: </label>
+                    <br>
+                    <input type="number" id="Card_number" name="Credit Card_number" min="10000" max="100000">
+                    <br>
+                    <label for="Cardholder_name" >Name on card: </label>
+                    <br>
+                    <input type="text" id="Cardholder_name" name="Cardholder_name" min="10000" max="100000"></input>
+                    <br>
+                    <label for="CVV" >CVV: </label>
+                    <br>
+                    <input type="number" id="CVV" name="CVV" min="10000" max="100000"></input>
+                </form>
+<!--                <label for="Payment_amount" class="label">Payment amount: </label>-->
+<!--                <input type="text" name="Payment_amount" id="Payment_amount"></input>-->
+            </div>
+            <div class = "checkout_final">
+                <form action>
+                    <label for="Payment_amount">Payment amount: </label>
+                    <input type="number" id="Payment_amount" name="Payment_amount" min="10000"></input>
+                    <br>
+                    <button id="checkout_button" type="submit">Pay now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="Socials">
+        <p>Follow us on </p>
+        <div class="social_media" style>
+            <img src="../images/facebook_logo.png" style="width: 50px; height: auto;"><img>
+            <img src="../images/twitter_logo.png" style="width: 50px; height: auto;"></img>
+            <img src="../images/instagram_logo.png" style="width: 50px; height: auto;"></img>
+        </div>
+    </div>
+    <div class="Contact">
+        <h1>Contact</h1>
+    </div>
+    <div class="Legal">
+        <h1>Legal</h1>
+    </div>
+</div>
 </body>
 </html>

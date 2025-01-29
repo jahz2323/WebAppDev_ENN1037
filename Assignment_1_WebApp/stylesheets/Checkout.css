@@ -1,6 +1,4 @@
 body {
-    overflow-x: hidden;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Lato, sans-serif;
@@ -22,6 +20,7 @@ body {
 }
 .nav ul {
     list-style: none;
+
     padding: 0;
     display: flex;
     margin-right: 50px;
@@ -39,39 +38,44 @@ body {
     transition: all .5s;
     transform: scale(1.1);
 }
-
-#content {
-    width: 100%;
-    margin: 20px;
-    background-image: url("../images/londis_Shop.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    justify-items: center;
-    align-content: center;
-    #Content_H1{
-        float: left;
+#checkout_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#checkout_info{
+    padding: 20px;
+    margin: 10px;
+    background-color: #3a5c69;
+    color: white;
+    b{
+        color: #32ff00;
     }
 }
-.Shopping_cart{
-    margin: 60px;
-    width: 70%;
-    background-color: #ffffff;
-    color: #000000;
+#checkout_timetable{
+    padding: 20px;
+    #Timetable{
+        width: 100%;
+    }
+}
+#transaction_container{
+    .transaction_method{
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        /*align-items: stretch;*/
+    }
+    ,
 
 }
-
-.column_labels{
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    display: flex;
-    justify-content: space-around;
-
+.checkout_final{
+    width: 100%;
+    padding: 30px;
+    margin: 20px;
 }
 
-.Product_image,.Product_details, .Product_Price, .Product_quantity, .Product_Remove, .Product_total{
-
-}
 #footer div {
     text-align: center;
     flex: 1;
