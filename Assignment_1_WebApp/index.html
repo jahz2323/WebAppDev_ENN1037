@@ -6,90 +6,204 @@
     <link href="stylesheets/styles.css" rel="stylesheet">
 </head>
 <body>
+<!-- Header
+
+    - Logo
+    - Nav
+        - Login
+        - Orders
+        - About
+        - News
+
+    *Implementing dropdown menu bar to make it more user friendly and discreet
+-->
 
 <div id="Header">
     <div class="nav">
         <div id="logo">
             <a href="index.html">
-                <img alt="logo" src="images/Londis-Logo-Orange-Text-3868968363.jpg " style="width: 100px; height: auto;" ></img>
+                <img alt="logo" src="images/Londis-Logo-Orange-Text-3868968363.jpg "
+                     style="width: 100px; height: auto;"></img>
             </a>
         </div>
         <ul>
+            <!--
+                - Login
+                - Orders
+                - About
+                - News
+            -->
+
             <li><a href="Pages/Login.html" target="_blank">Login</a></li>
             <li><a href="Pages/Orders.html">Orders</a></li>
             <li><a href="Pages/About.html">About</a></li>
+            <li><a href="Pages/News.html">News</a></li>
         </ul>
     </div>
 </div>
 
+<!-- bulk of the content will be here -->
+
 <div id="Content">
     <div class="img_container">
+        <!-- Landing Page Image -->
         <h1 style="color: white; font-family: Avenir,sans-serif; font-size: 50px; ">Dublin City University Londis</h1>
         <div class="ShopNow">
+            <!-- Shop Now Button
+                - Redirects to Shop.html
+            -->
             <a href="../Assignment_1_WebApp/Pages/Shop.html" title="Shop">
                 <h2>Browse our products</h2>
             </a>
         </div>
     </div>
-    <div class="Featured">
-        <h3>New in stock!</h3>
-        <h3>Featured</h3>
-        <img id="DeliBar" src="images/Londis_DeliBar.jpg" alt="Londis Deli Bar"></img>
-        <p>State-of-the-art retail convenience store in the heart of <strong> DCU </strong> Campus <br>
-            Sustainable, ethical retail. Londis symbol group store, owned and run by DCU
-        </p>
-    </div>
-
-    <h2>Customer Reviews</h2>
-    <div class="Reviews">
-        <img alt="Student_1" src="images/Face1.png">
-        <h3>Student 1</h3>
-        <h4>Mechatronic Student</h4>
-        <p>"Amazing Service and Convenient Location!" I’ve been shopping at DCU Londis for a while now, and I have to
-            say, the customer service is always top-notch. The staff is friendly, welcoming, and always ready to help
-            you find whatever you need. Whether I’m grabbing a quick snack between classes or picking up some essentials
-            for the week, they never disappoint. It’s great to have such a reliable shop on campus – I highly recommend
-            it!</p>
-        <img alt="Student_2" src="images/Face2.jpg"></img>
-        <h3>Student 2</h3>
-        <h4>Civil Law Student</h4>
-        <p>"A Fantastic Selection of Products" DCU Londis has an impressive range of products, from snacks and drinks to
-            fresh produce and toiletries. It’s so convenient to have such variety right on campus. I’m always able to
-            find what I need, whether it’s for a quick lunch or ingredients for cooking at home. They have all the
-            basics covered, and the variety means I don’t have to leave campus for anything. A great shop with a little
-            bit of everything!</p>
-        <img alt="Student_3" src="images/JahzFace.jpeg"></img>
-        <h3>Student 3</h3>
-        <h4>Electronic and Computing Student</h4>
-        <p>"Highly Recommend for Campus Needs" If you’re a student at DCU, you absolutely need to check out Londis! The
-            convenience of having a well-stocked store right on campus is unmatched, and the customer service is always
-            friendly and helpful. I’ve never had any issues, and I always leave satisfied with whatever I purchase. It’s
-            definitely my go-to spot for quick grocery runs, snacks, and everything in between. Highly recommend!</p>
-    </div>
-</div>
-<div id="footer">
-    <div class="Socials">
-        <p>Follow us on </p>
-        <div class="social_media" style>
-            <img src="images/facebook_logo.png" style="width: 50px; height: auto;"><img>
-            <img src="images/twitter_logo.png" style="width: 50px; height: auto;"></img>
-            <img src="images/instagram_logo.png" style="width: 50px; height: auto;"></img>
+    <div id="content_container">
+        <div id="Featured">
+            <h1>Featured!</h1>
+            <!-- Slideshow animation -->
+            <!--
+                - Deli Bar
+                - Fired Pizza Oven
+                - Shop
+                - Rolls
+            -->
+            <div id="slideshow">
+                <div class="slide-wrapper">
+                    <!-- Define content of each slide -->
+                    <!-- Slideshow horizontal animation -->
+                    <div class="slide">
+                        <img class="slide-number" src="images/Londis_DeliBar.jpg" alt="Londis Deli"></img>
+                        <p>
+                            Our Deli Bar offers a wide selection of fresh sandwiches, wraps, salads, and more. Perfect
+                            for a
+                            quick
+                            lunch or snack between classes!
+                        </p>
+                    </div>
+                    <div class="slide">
+                        <img class="slide-number" src="images/Fired_Pizza_Oven.jpg" alt="Fired Piza"></img>
+                        <p>
+                            Our Fired Pizza Oven serves up delicious, made-to-order pizzas with your choice of toppings.
+                            Perfect
+                            for sharing with friends or enjoying on your own!
+                        </p>
+                    </div>
+                    <div class="slide">
+                        <img class="slide-number" src="images/londis_Shop.jpg" alt="Shop"></img>
+                        <p>
+                            Our shop is stocked with all your favorite snacks, drinks, groceries, and more. Stop by to
+                            pick
+                            up
+                            everything you need for the week!
+                        </p>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-number">
+                            <img src="images/londis_rolls.jpg" alt="Shop"></img>
+                            <p>
+                                Our bakery offers a variety of fresh rolls. Perfect for breakfast,
+                                lunch, or
+                                a quick snack!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Reviews_container">
+            <!-- Another slideshow - top down -->
+            <h1 style="font-family: Lato, sans-serif; text-align: center">Customer Reviews</h1>
+            <div class="review_wrapper">
+                <div class="review">
+                    <div class="review-number">
+                        <img alt="Student_1" src="images/Face1.png">
+                        <h3>Jimmy</h3>
+                        <h4>Mechatronic Student</h4>
+                        <p>"Amazing Service and Convenient Location!" I’ve been shopping at DCU Londis for a while now,
+                            and
+                            I have
+                            to
+                            say, the customer service is always top-notch. The staff is friendly, welcoming, and always
+                            ready to
+                            help
+                            you find whatever you need. Whether I’m grabbing a quick snack between classes or picking up
+                            some
+                            essentials
+                            for the week, they never disappoint. It’s great to have such a reliable shop on campus – I
+                            highly
+                            recommend
+                            it!</p>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-number">
+                        <img alt="Student_2" src="images/Face2.jpg">
+                        <h3>Marcus</h3>
+                        <h4>Civil Law Student</h4>
+                        <p>"A Fantastic Selection of Products" DCU Londis has an impressive range of products, from
+                            snacks
+                            and
+                            drinks to
+                            fresh produce and toiletries. It’s so convenient to have such variety right on campus.
+                            I’m
+                            always able
+                            to
+                            find what I need, whether it’s for a quick lunch or ingredients for cooking at home.
+                            They
+                            have
+                            all the
+                            basics covered, and the variety means I don’t have to leave campus for anything. A great
+                            shop
+                            with a
+                            little
+                            bit of everything!</p>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-number">
+                        <img alt="Student_3" src="images/JahzFace.jpeg">
+                        <h3>Jahz</h3>
+                        <h4>Electronic and Computing Student</h4>
+                        <p>"Highly Recommend for Campus Needs" If you’re a student at DCU, you absolutely need to
+                            check
+                            out
+                            Londis!
+                            The
+                            convenience of having a well-stocked store right on campus is unmatched, and the
+                            customer
+                            service is
+                            always
+                            friendly and helpful. I’ve never had any issues, and I always leave satisfied with
+                            whatever
+                            I
+                            purchase.
+                            It’s
+                            definitely my go-to spot for quick grocery runs, snacks, and everything in between.
+                            Highly
+                            recommend!</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="Contact">
-        <h1>Contact</h1>
-    </div>
-    <div class="Legal">
-        <h1>Legal</h1>
+    <div id="footer" style="font-family: Lato, sans-serif">
+        <div class="Socials">
+            <p>Follow us on </p>
+            <div class="social_media" style>
+                <img src="images/facebook_logo.png" style="width: 50px; height: auto;"><img>
+                <img src="images/twitter_logo.png" style="width: 50px; height: auto;"></img>
+                <img src="images/instagram_logo.png" style="width: 50px; height: auto;"></img>
+            </div>
+        </div>
+        <div class="Contact">
+            <h1>Contact</h1>
+        </div>
+        <div class="Legal">
+            <h1>Legal</h1>
+        </div>
     </div>
 </div>
 </body>
 </html>
 
-<!--Click and collect - DCU Londis-->
-<!-- - Auth/ Login-->
-<!-- - Transaction sys-->
-<!-- - Click and collect / order-->
-<!-- - Browse items / Add to basket-->
-<!-- - View basket, Remove from basket -->
 

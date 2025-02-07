@@ -1,8 +1,10 @@
+/* The body styling ensures that horizontal scrolling is prevented and the box-sizing is set to border-box to make width and height calculations more predictable. */
 body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     box-sizing: border-box;
 }
 
+/* The header and footer are styled to span the full width, with a background color and white text. Flexbox is used to evenly distribute content and align items centrally. */
 #header, #footer {
     width: 100%;
     background-color: #3a5c69;
@@ -13,15 +15,17 @@ body {
     padding: 10px 20px;
 }
 
+/* Navigation styling ensures items are aligned to the right using flexbox. Box-sizing is applied to keep the layout predictable. */
 .nav {
     color: black;
-    /*border: black solid 3px;*/
     float: right;
     display: flex;
     justify-content: flex-end;
     box-sizing: border-box;
     align-items: center;
 }
+
+/* Navigation list items are displayed inline without bullet points, with padding for spacing. */
 
 .nav ul li {
     list-style: none;
@@ -30,6 +34,7 @@ body {
     padding-right: 20px;
 }
 
+/* Navigation links are styled with capitalization, font settings, and no text decoration. */
 .nav ul li a {
     color: black;
     text-transform: capitalize;
@@ -38,26 +43,22 @@ body {
     font-family: Lato, sans-serif;
 }
 
+/* Applying transition and scaling effects to the navigation elements when hovered. */
 .nav ul, .nav li:hover, .nav.a:hover {
     transition: all .5s;
     transform: scale(1.1);
 }
 
+/* Content container is set to take full width and height with relative positioning, padding is added to ensure spacing inside. */
 #content {
     width: 100%;
     height: 100%;
     position: relative;
-    padding: 20px;  /* Add some padding to give space inside the container */
-    box-sizing: border-box;  /* Make sure padding doesn't affect width */
-}
-#Content p {
-    color: black;
-    font-family: Lato, sans-serif;
-    font-size: 10px;
-    text-align: center;
-    border-radius: 2px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
+/* The image container is styled with a background image, fixed positioning, border styling, and centered text. */
 .img_container {
     background-image: url(../images/Londis_Front.jpg);
     background-repeat: no-repeat;
@@ -68,12 +69,12 @@ body {
     border-radius: 10px;
     height: 400px;
     width: 100%;
-    float: none;
     align-content: center;
     text-align: center;
-    margin-bottom: 40px
+    margin-bottom: 40px;
 }
 
+/* The heading inside the image container is centered and styled with a specific font and color. */
 .img_container h1 {
     margin: auto;
     text-align: center;
@@ -82,12 +83,13 @@ body {
     font-size: 30px;
 }
 
-.ShopNow{
+/* ShopNow button styling ensures proper alignment and spacing, with hover effects applied. */
+.ShopNow {
     display: inline-block;
     margin: 55px;
     text-align: center;
 }
-.ShopNow a:link, .ShopNow a:visited{
+.ShopNow a:link, .ShopNow a:visited {
     text-decoration: none;
     border-radius: 10px;
     box-shadow: black 0px 1px 1px;
@@ -101,51 +103,115 @@ body {
     transform: scale(1.1);
     color: #b9b9b9;
     box-shadow: #FFFFFF 2px 1px 10px;
+}
 
-}
-.Featured{
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 10px;    /* Add spacing */
-    background-color: #f8f9fa; /* Optional: Add a background */
-    border-radius: 5px; /* Optional: Rounded corners */
-}
-#DeliBar{
-    border: #bbbbbb solid 3px;
-    width: 50%;
-    max-width: 100%;
-    height: auto;
-
-}
-.Reviews {
-    background-color: #f8f9fa;
+/* Flexbox-based layout for content containers to evenly distribute space. */
+#content_container{
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+/* The featured section is styled with a border, centered text, and appropriate padding and margins. */
+#Featured{
+    justify-content: space-evenly;
     align-items: center;
-    margin-right: 20px;
-    line-height: 25px;
-    gap: 1px;
+    text-align: center;
+    border: black solid 3px;
+    width: fit-content;
+    margin: 20px;
+    padding: 20px;
 }
-
-.Reviews img {
-    width: 150px;
-    height: 150px;
-    border: #1f1e1e ridge 2px;
-    border-radius: 100px;
-}
-
-.Reviews h3, .Reviews h4, .Reviews h5, .Reviews h6 {
+#Featured h1 {
     font-family: Lato, sans-serif;
-    font-size: 15px;
-    color: #7777ff;
+    font-size: 30px;
 }
 
-.Reviews p {
+/* Slideshow container styling with defined dimensions and margin centering. */
+#slideshow{
+    overflow: hidden;
+    height: 510px;
+    width: 728px;
+    margin: 0 auto;
+}
+
+/* Each slide is set to float left with defined width, ensuring image responsiveness. */
+.slide{
+    float: left;
+    height: auto;
+    width: 728px;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+.slide p {
     font-family: Lato, sans-serif;
-    width: 65%;
+    font-size: 10px;
+    color: black;
 }
 
-#footer div {
+/* The slideshow wrapper has a calculated width for multiple slides and an infinite animation effect. */
+.slide-wrapper{
+    width: calc(728px * 4);
+    animation: slide 25s ease infinite;
+}
+
+/* Keyframe animation for slideshow transitions. */
+@keyframes slide{
+    20%{ margin-left: 0px; }
+    40%{ margin-left: -728px; }
+    60%{ margin-left: -1456px; }
+    80%{ margin-left: -2184px; }
+}
+
+/* Reviews section has a defined size, flexbox centering, and a transparent background with a ridge border. */
+#Reviews_container {
+    border: black ridge 2px;
+    background-color: rgba(31, 30, 30, 0.21);
+    color: black;
+    height: 700px;
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Review container styling. */
+.review{
+    height: auto;
+    width: 800px;
+}
+
+/* Individual review items with image and text formatting. */
+.review-number{
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+    color: #000000;
+    margin: 0 auto;
+    text-align: center;
+}
+.review-number img {
+    width: 350px;
+    height: 350px;
+    border: black solid 3px;
+    border-radius: 250px;
+}
+
+/* Animation applied to review wrapper for smooth scrolling effects. */
+.review_wrapper{
+    width: calc(800px * 3);
+    position: relative;
+    animation: scroll 40s ease-out forwards infinite;
+}
+@keyframes scroll {
+    from { top: 100px; }
+    to { top: -1200px; }
+}
+
+/* Footer specific text alignment and flex settings. */
+#footer {
     text-align: center;
     flex: 1;
 }
