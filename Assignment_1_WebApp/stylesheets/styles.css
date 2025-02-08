@@ -2,52 +2,174 @@
 body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     box-sizing: border-box;
+    a:visited {
+        color: white;
+    }
+    a:link {
+        color: white;
+    }
 }
 
 /* The header and footer are styled to span the full width, with a background color and white text. Flexbox is used to evenly distribute content and align items centrally. */
-#header, #footer {
+#header, footer {
     width: 100%;
+    height: auto;
     background-color: #3a5c69;
     color: white;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 10px 20px;
 }
-
-/* Navigation styling ensures items are aligned to the right using flexbox. Box-sizing is applied to keep the layout predictable. */
-.nav {
-    color: black;
-    float: right;
+/* Navbar Styling */
+.navbar {
     display: flex;
-    justify-content: flex-end;
-    box-sizing: border-box;
+    justify-content: center; /* Center everything */
     align-items: center;
+    background-color: #3a5c69;
+    padding: 15px 20px;
+    gap: 40px; /* Space between elements */
 }
 
-/* Navigation list items are displayed inline without bullet points, with padding for spacing. */
+/* Logo */
+.logo img {
+    height: 50px;
+}
 
-.nav ul li {
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #bbbbbb;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background: #f9f9f9;
+}
+
+.search-bar {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    width: 400px;
+    background: none;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+/* Drop Button with Icon */
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Dropdown Menu Icon */
+.menu-icon {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+}
+
+/* Styling the Dropdown List */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 100;
     list-style: none;
-    display: inline-block;
-    padding-left: 2px;
-    padding-right: 20px;
+    padding: 0;
+    margin: 0;
 }
 
-/* Navigation links are styled with capitalization, font settings, and no text decoration. */
-.nav ul li a {
-    color: black;
-    text-transform: capitalize;
+/* Dropdown List Items */
+.dropdown-content li {
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content li:last-child {
+    border-bottom: none;
+}
+
+/* Dropdown Links */
+.dropdown-content li a {
+    display: block;
+    padding: 10px;
     text-decoration: none;
+    color: black;
     font-size: 15px;
     font-family: Lato, sans-serif;
+    text-align: center;
 }
 
-/* Applying transition and scaling effects to the navigation elements when hovered. */
-.nav ul, .nav li:hover, .nav.a:hover {
-    transition: all .5s;
-    transform: scale(1.1);
+/* Dropdown Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
+
+/* Multi-Level Submenu */
+.has-submenu {
+    position: relative;
+}
+
+/* Submenu Styling */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Positions submenu to the right */
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Submenu appears when hovering over "Orders" */
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+/* Submenu Items */
+.submenu li {
+    border-bottom: 1px solid #ddd;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+/* Submenu Links */
+.submenu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+/* Submenu Hover Effect */
+.submenu li a:hover {
+    background-color: #f1f1f1;
+}
+
 
 /* Content container is set to take full width and height with relative positioning, padding is added to ensure spacing inside. */
 #content {
@@ -58,52 +180,77 @@ body {
     box-sizing: border-box;
 }
 
-/* The image container is styled with a background image, fixed positioning, border styling, and centered text. */
+#Front_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/* Image container with proper positioning */
 .img_container {
+    position: relative;
+    height: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Separate div for the blurred background */
+.img_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url(../images/Londis_Front.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    border: #bbbbbb solid 3px;
-    border-radius: 10px;
-    height: 400px;
-    width: 100%;
-    align-content: center;
-    text-align: center;
-    margin-bottom: 40px;
+    filter: blur(5px);
+    z-index: 1;
 }
 
-/* The heading inside the image container is centered and styled with a specific font and color. */
-.img_container h1 {
-    margin: auto;
+/* Center content in a column */
+.text_content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column; /* Stack h1 and h2 vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
     text-align: center;
-    color: aliceblue;
-    font-family: Lato, sans-serif;
-    font-size: 30px;
 }
 
-/* ShopNow button styling ensures proper alignment and spacing, with hover effects applied. */
-.ShopNow {
-    display: inline-block;
-    margin: 55px;
-    text-align: center;
-}
-.ShopNow a:link, .ShopNow a:visited {
+
+/* ShopNow button styling */
+.ShopNow a {
     text-decoration: none;
     border-radius: 10px;
     box-shadow: black 0px 1px 1px;
     color: #ffffff;
-    width: 150px;
     font-family: Lato, sans-serif;
     font-size: 25px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
 }
+
 .ShopNow a:hover {
-    transition: all .5s;
+    transition: all 0.5s;
     transform: scale(1.1);
     color: #b9b9b9;
     box-shadow: #FFFFFF 2px 1px 10px;
 }
+
 
 /* Flexbox-based layout for content containers to evenly distribute space. */
 #content_container{
@@ -111,58 +258,141 @@ body {
     justify-content: space-evenly;
     padding: 20px;
 }
+/* Help Container - Centers Text */
+#Help_container {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+    font-family: Lato, sans-serif;
+}
 
-/* The featured section is styled with a border, centered text, and appropriate padding and margins. */
-#Featured{
-    justify-content: space-evenly;
+/* Help Box - Displays help descriptions in a row */
+#help_box {
+    display: flex;
+    justify-content: center; /* Centers the help boxes horizontally */
+    align-items: flex-start; /* Aligns items at the top */
+    gap: 40px; /* Adds spacing between the boxes */
+    flex-wrap: wrap; /* Allows responsiveness */
+    margin-top: 40px;
+}
+
+/* Individual Help Box */
+.help_description {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    border: black solid 3px;
-    width: fit-content;
-    margin: 20px;
+    width: 250px;
     padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-#Featured h1 {
+
+/* SVG Styling */
+.help_svg svg {
+    width: 60px;
+    height: 60px;
+    fill: #ff6600;
+    margin-bottom: 15px;
+}
+
+/* Help Text */
+.help_text h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.help_text p {
+    font-size: 14px;
+    color: #666;
+}
+/* Featured container uses flex to align text and slideshow side by side */
+#Featured_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px; /* Adds space between text and slideshow */
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+/* The text area styling */
+#Featured_text {
+    flex: 1; /* Takes up remaining space */
+    max-width: 50%; /* Ensures the text does not take up too much space */
+}
+
+/* The featured header and paragraph */
+#Featured_text h1 {
     font-family: Lato, sans-serif;
     font-size: 30px;
 }
 
-/* Slideshow container styling with defined dimensions and margin centering. */
-#slideshow{
+#Featured_text p {
+    font-family: Lato, sans-serif;
+    font-size: 25px;
+}
+
+/* Slideshow container styling */
+#Featured {
+    flex: 1;
+    max-width: 50%; /* Ensures slideshow doesn’t take up all the space */
+}
+
+#slideshow {
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     height: 510px;
     width: 728px;
     margin: 0 auto;
 }
 
-/* Each slide is set to float left with defined width, ensuring image responsiveness. */
-.slide{
-    float: left;
-    height: auto;
+/* Each slide is set to float left with defined width, ensuring image responsiveness */
+.slide {
     width: 728px;
+    height: auto;
+    display: inline-block;
 }
+
 .slide img {
     width: 100%;
-    height: 100%;
+    height: 90%;
 }
+
 .slide p {
+    text-align: center;
     font-family: Lato, sans-serif;
     font-size: 10px;
     color: black;
 }
 
-/* The slideshow wrapper has a calculated width for multiple slides and an infinite animation effect. */
-.slide-wrapper{
+/* The slideshow wrapper has a calculated width for multiple slides and an infinite animation effect */
+.slide-wrapper {
+    display: flex;
     width: calc(728px * 4);
     animation: slide 25s ease infinite;
 }
 
-/* Keyframe animation for slideshow transitions. */
-@keyframes slide{
-    20%{ margin-left: 0px; }
-    40%{ margin-left: -728px; }
-    60%{ margin-left: -1456px; }
-    80%{ margin-left: -2184px; }
+/* Keyframe animation for slideshow transitions */
+@keyframes slide {
+    20% {
+        margin-left: 0px;
+    }
+    40% {
+        margin-left: -728px;
+    }
+    60% {
+        margin-left: -1456px;
+    }
+    80% {
+        margin-left: -2184px;
+    }
+    100% {
+        margin-left: 0px;
+    }
 }
 
 /* Reviews section has a defined size, flexbox centering, and a transparent background with a ridge border. */
@@ -171,12 +401,67 @@ body {
     background-color: rgba(31, 30, 30, 0.21);
     color: black;
     height: 700px;
-    width: 1000px;
+    width: 800px;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
     display: flex;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+
 }
+
+/* Review text styling. */
+#Reviews_Text {
+    margin: 200px 0 20px 0;
+
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* Adds space between stars and text */
+    font-family: Lato, sans-serif;
+}
+
+/* Container for the stars, aligned horizontally */
+.Stars {
+    display: flex;           /* Aligns stars horizontally */
+    justify-content: center; /* Centers the stars in the container */
+    align-items: center;     /* Vertically aligns them */
+    gap: 5px;                /* Space between stars */
+}
+
+/* You can apply a specific size to the SVG stars if necessary */
+.Stars svg {
+    width: 30px;  /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+
+/* Reviews text container */
+#Reviews_Text_textbox {
+    flex: 2;
+    display: flex;
+    flex-direction: column; /* Stack heading and paragraph vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+#Reviews_Text_textbox h1 {
+    font-size: 30px;
+    margin-bottom: 10px; /* Adds space below the heading */
+}
+
+#Reviews_Text_textbox p {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px; /* Controls max width for better readability */
+}
+
+
 
 /* Review container styling. */
 .review{
@@ -206,8 +491,8 @@ body {
     animation: scroll 40s ease-out forwards infinite;
 }
 @keyframes scroll {
-    from { top: 100px; }
-    to { top: -1200px; }
+    from { top: 700px; }
+    to { top: -700px; }
 }
 
 /* Footer specific text alignment and flex settings. */

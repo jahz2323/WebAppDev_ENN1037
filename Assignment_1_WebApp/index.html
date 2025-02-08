@@ -19,120 +19,246 @@
 -->
 
 <div id="Header">
-    <div class="nav">
-        <div id="logo">
-            <a href="index.html">
-                <img alt="logo" src="images/Londis-Logo-Orange-Text-3868968363.jpg "
-                     style="width: 100px; height: auto;"></img>
-            </a>
-        </div>
-        <ul>
-            <!--
-                - Login
-                - Orders
-                - About
-                - News
-            -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="../Assignment_1_WebApp/images/Londis-Logo.jpg" alt="Londis Logo">
+        </a>
 
-            <li><a href="Pages/Login.html" target="_blank">Login</a></li>
-            <li><a href="Pages/Orders.html">Orders</a></li>
-            <li><a href="Pages/About.html">About</a></li>
-            <li><a href="Pages/News.html">News</a></li>
-        </ul>
-    </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search for products.." class="search-bar">
+            <button class="search-btn">
+                <a href="Pages/Shop.html" style="text-decoration: none">🔍</a>
+            </button>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img src="../Assignment_1_WebApp/images/Navbar_Menu.png" alt="Menu" class="menu-icon">
+            </button>
+            <ul class="dropdown-content">
+                <li><a href="Pages/Login.html" target="_blank">Login</a></li>
+                <li class="has-submenu">
+                    <a href="Pages/Shop.html">Shop</a>
+                    <ul class="submenu">
+                        <li><a href="Pages/Checkout.html">Checkout</a></li>
+                        <li><a href="Pages/Orders.html">Orders</a></li>
+                    </ul>
+                </li>
+                <li><a href="Pages/About.html">About</a></li>
+                <li><a href="Pages/News.html">News</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
 </div>
 
 <!-- bulk of the content will be here -->
 
 <div id="Content">
-    <div class="img_container">
-        <!-- Landing Page Image -->
-        <h1 style="color: white; font-family: Avenir,sans-serif; font-size: 50px; ">Dublin City University Londis</h1>
-        <div class="ShopNow">
-            <!-- Shop Now Button
-                - Redirects to Shop.html
-            -->
-            <a href="../Assignment_1_WebApp/Pages/Shop.html" title="Shop">
-                <h2>Browse our products</h2>
-            </a>
+    <div id="Front_container">
+        <div class="img_container">
+            <div class="img_overlay"></div>
+            <div class="text_content">
+                <h1 style="color: #ffffff; font-family: Lato, sans-serif; font-size: 60px;">Dublin City University
+                    Londis</h1>
+                <div class="ShopNow">
+                    <a href="../Assignment_1_WebApp/Pages/Shop.html" title="Shop">
+                        <h2>Browse our products</h2>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="content_container">
-        <div id="Featured">
-            <h1>Featured!</h1>
-            <!-- Slideshow animation -->
-            <!--
-                - Deli Bar
-                - Fired Pizza Oven
-                - Shop
-                - Rolls
-            -->
-            <div id="slideshow">
-                <div class="slide-wrapper">
-                    <!-- Define content of each slide -->
-                    <!-- Slideshow horizontal animation -->
-                    <div class="slide">
-                        <img class="slide-number" src="images/Londis_DeliBar.jpg" alt="Londis Deli"></img>
-                        <p>
-                            Our Deli Bar offers a wide selection of fresh sandwiches, wraps, salads, and more. Perfect
-                            for a
-                            quick
-                            lunch or snack between classes!
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img class="slide-number" src="images/Fired_Pizza_Oven.jpg" alt="Fired Piza"></img>
-                        <p>
-                            Our Fired Pizza Oven serves up delicious, made-to-order pizzas with your choice of toppings.
-                            Perfect
-                            for sharing with friends or enjoying on your own!
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img class="slide-number" src="images/londis_Shop.jpg" alt="Shop"></img>
-                        <p>
-                            Our shop is stocked with all your favorite snacks, drinks, groceries, and more. Stop by to
-                            pick
-                            up
-                            everything you need for the week!
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <div class="slide-number">
-                            <img src="images/londis_rolls.jpg" alt="Shop"></img>
+
+
+    <div id="Help_container">
+        <div>
+            <h1>How can we help you?</h1>
+            <p>Our goal is to provide you with the best shopping experience possible. Whether you’re looking for fresh
+                produce, snacks, drinks, or household essentials, we’ve got you covered.</p>
+            <h2>How it works</h2>
+        </div>
+
+        <div id="help_box">
+            <!-- Help Step 1 -->
+            <div class="help_description">
+                <div class="help_svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                    </svg>
+                </div>
+                <div class="help_text">
+                    <h3>1. Browse our products</h3>
+                    <p>Choose from our vast range of products that are fresh, affordable and brought in daily.</p>
+                </div>
+            </div>
+
+            <!-- Help Step 2 -->
+            <div class="help_description">
+                <div class="help_svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+                    </svg>
+                </div>
+                <div class="help_text">
+                    <h3>2. Add to cart</h3>
+                    <p>Once you’ve found what you’re looking for, simply add it to your cart and proceed to
+                        checkout.</p>
+                </div>
+            </div>
+
+            <!-- Help Step 3 -->
+            <div class="help_description">
+                <div class="help_svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path d="M512 80c8.8 0 16 7.2 16 16l0 32L48 128l0-32c0-8.8 7.2-16 16-16l448 0zm16 144l0 192c0 8.8-7.2 16-16 16L64 432c-8.8 0-16-7.2-16-16l0-192 480 0zM64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24l48 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-48 0zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l112 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-112 0z"/>
+                    </svg>
+                </div>
+                <div class="help_text">
+                    <h3>3. Checkout</h3>
+                    <p>Enter your payment and select your collection time. Your order will be waiting for you at the
+                        designated collection area!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Content_container">
+        <div id="Featured_container">
+            <div id="Featured_text">
+                <h1>What we offer</h1>
+                <p>Discover our most popular products and services at DCU Londis,
+                    designed to make your shopping experience seamless and convenient.
+                    Our click-and-collect commerce web app allows you to browse a carefully
+                    curated selection of top-selling items,
+                    from fresh produce and daily essentials to exclusive promotions.
+                    Easily add products to your cart,
+                    choose a collection time that suits your schedule,
+                    and pick up your order hassle-free.
+                    Whether you're a student, staff member, or visitor,
+                    our featured products ensure you get the best of DCU Londis
+                    with just a few clicks. Shop smarter, faster, and easier today!
+                </p>
+            </div>
+            <div id="Featured">
+                <!-- Slideshow animation -->
+                <div id="slideshow">
+                    <div class="slide-wrapper">
+                        <div class="slide">
+                            <img class="slide-number" src="images/Londis_DeliBar.jpg" alt="Londis Deli">
                             <p>
-                                Our bakery offers a variety of fresh rolls. Perfect for breakfast,
-                                lunch, or
-                                a quick snack!
+                                Our Deli Bar offers a wide selection of fresh sandwiches, wraps, salads, and more.
+                                Perfect for a quick lunch or snack between classes!
                             </p>
+                        </div>
+                        <div class="slide">
+                            <img class="slide-number" src="images/Fired_Pizza_Oven.jpg" alt="Fired Pizza">
+                            <p>
+                                Our Fired Pizza Oven serves up delicious, made-to-order pizzas with your choice of
+                                toppings. Perfect for sharing with friends or enjoying on your own!
+                            </p>
+                        </div>
+                        <div class="slide">
+                            <img class="slide-number" src="images/londis_Shop.jpg" alt="Shop">
+                            <p>
+                                Our shop is stocked with all your favorite snacks, drinks, groceries, and more. Stop by
+                                to
+                                pick up everything you need for the week!
+                            </p>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-number">
+                                <img src="images/londis_rolls.jpg" alt="Shop">
+                                <p>
+                                    Our bakery offers a variety of fresh rolls. Perfect for breakfast, lunch, or a quick
+                                    snack!
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+        <div id="Reviews_Text">
+            <div class="Stars">
+                <svg height="64px" width="64px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1.44 -1.44 50.82 50.82"
+                     xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="2.01348">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g id="SVGRepo_iconCarrier">
+                    <path style="fill:#ED8A19;"
+                          d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z"/>
+                </g>
+                </svg>
+                <svg height="64px" width="64px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1.44 -1.44 50.82 50.82"
+                     xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="2.01348">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g id="SVGRepo_iconCarrier">
+                    <path style="fill:#ED8A19;"
+                          d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z"/>
+                </g>
+                </svg>
+                <svg height="64px" width="64px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1.44 -1.44 50.82 50.82"
+                     xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="2.01348">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g id="SVGRepo_iconCarrier">
+                    <path style="fill:#ED8A19;"
+                          d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z"/>
+                </g>
+                </svg>
+                <svg height="64px" width="64px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1.44 -1.44 50.82 50.82"
+                     xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="2.01348">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g id="SVGRepo_iconCarrier">
+                    <path style="fill:#ED8A19;"
+                          d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z"/>
+                </g>
+                </svg>
+                <svg height="64px" width="64px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1.44 -1.44 50.82 50.82"
+                     xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="2.01348">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g id="SVGRepo_iconCarrier">
+                    <path style="fill:#ED8A19;"
+                          d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z"/>
+                </g>
+                </svg>
+            </div>
+            <h1>From Trustpilot with over 6000 reviews!! </h1>
+            <div id="Reviews_Text_textbox">
+                <h1>What our customers say</h1>
+                <p>Read reviews from students, staff, and visitors who have shopped at DCU Londis.
+                    Find out why they love our products, service, and convenience – and why you will too!</p>
+            </div>
+        </div>
         <div id="Reviews_container">
-            <!-- Another slideshow - top down -->
-            <h1 style="font-family: Lato, sans-serif; text-align: center">Customer Reviews</h1>
+            <!-- Review Section -->
             <div class="review_wrapper">
                 <div class="review">
                     <div class="review-number">
+                        <h1 style="font-family: Lato, sans-serif; text-align: center; padding: 20px">Reviews</h1>
                         <img alt="Student_1" src="images/Face1.png">
                         <h3>Jimmy</h3>
                         <h4>Mechatronic Student</h4>
                         <p>"Amazing Service and Convenient Location!" I’ve been shopping at DCU Londis for a while now,
-                            and
-                            I have
-                            to
-                            say, the customer service is always top-notch. The staff is friendly, welcoming, and always
-                            ready to
-                            help
-                            you find whatever you need. Whether I’m grabbing a quick snack between classes or picking up
-                            some
-                            essentials
-                            for the week, they never disappoint. It’s great to have such a reliable shop on campus – I
-                            highly
-                            recommend
-                            it!</p>
+                            and I have to say, the customer service is always top-notch. The staff is friendly,
+                            welcoming, and
+                            always ready to help you find whatever you need. Whether I’m grabbing a quick snack between
+                            classes
+                            or picking up some essentials for the week, they never disappoint. It’s great to have such a
+                            reliable
+                            shop on campus – I highly recommend it!</p>
                     </div>
                 </div>
                 <div class="review">
@@ -142,21 +268,13 @@
                         <h4>Civil Law Student</h4>
                         <p>"A Fantastic Selection of Products" DCU Londis has an impressive range of products, from
                             snacks
-                            and
-                            drinks to
-                            fresh produce and toiletries. It’s so convenient to have such variety right on campus.
-                            I’m
-                            always able
-                            to
-                            find what I need, whether it’s for a quick lunch or ingredients for cooking at home.
-                            They
-                            have
-                            all the
-                            basics covered, and the variety means I don’t have to leave campus for anything. A great
-                            shop
-                            with a
-                            little
-                            bit of everything!</p>
+                            and drinks to fresh produce and toiletries. It’s so convenient to have such variety right on
+                            campus.
+                            I’m always able to find what I need, whether it’s for a quick lunch or ingredients for
+                            cooking at home.
+                            They have all the basics covered, and the variety means I don’t have to leave campus for
+                            anything. A great
+                            shop with a little bit of everything!</p>
                     </div>
                 </div>
                 <div class="review">
@@ -164,44 +282,42 @@
                         <img alt="Student_3" src="images/JahzFace.jpeg">
                         <h3>Jahz</h3>
                         <h4>Electronic and Computing Student</h4>
-                        <p>"Highly Recommend for Campus Needs" If you’re a student at DCU, you absolutely need to
-                            check
+                        <p>"Highly Recommend for Campus Needs" If you’re a student at DCU, you absolutely need to check
                             out
-                            Londis!
-                            The
-                            convenience of having a well-stocked store right on campus is unmatched, and the
+                            Londis! The convenience of having a well-stocked store right on campus is unmatched, and the
                             customer
-                            service is
-                            always
-                            friendly and helpful. I’ve never had any issues, and I always leave satisfied with
-                            whatever
-                            I
-                            purchase.
-                            It’s
-                            definitely my go-to spot for quick grocery runs, snacks, and everything in between.
-                            Highly
+                            service is always friendly and helpful. I’ve never had any issues, and I always leave
+                            satisfied with whatever
+                            I purchase. It’s definitely my go-to spot for quick grocery runs, snacks, and everything in
+                            between. Highly
                             recommend!</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="footer" style="font-family: Lato, sans-serif">
+
+
+    <footer id="footer" style="font-family: Lato, sans-serif">
         <div class="Socials">
             <p>Follow us on </p>
             <div class="social_media" style>
-                <img src="images/facebook_logo.png" style="width: 50px; height: auto;"><img>
-                <img src="images/twitter_logo.png" style="width: 50px; height: auto;"></img>
-                <img src="images/instagram_logo.png" style="width: 50px; height: auto;"></img>
+                <img src="../Assignment_1_WebApp/images/icons/facebook_logo.png"
+                     style="width: 50px; height: auto;"><img>
+                <img src="images/icons/Twitter_Logo.png" style="width: 50px; height: auto;"></img>
+                <img src="images/icons/instagram_logo.png" style="width: 50px; height: auto;"></img>
             </div>
         </div>
         <div class="Contact">
-            <h1>Contact</h1>
+            <a href="Pages/Contact.html" style="text-decoration: none" ;>
+                <h1>Contact Us</h1>
+            </a>
         </div>
         <div class="Legal">
             <h1>Legal</h1>
         </div>
-    </div>
+    </footer>
+
 </div>
 </body>
 </html>
