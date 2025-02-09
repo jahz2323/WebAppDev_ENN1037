@@ -6,62 +6,92 @@
     <link rel="stylesheet" href="../stylesheets/login.css"></link>
 </head>
 <body>
-<div id="header">
-    <div id="logo">
-        <a href="../index.html">
-            <img alt="Londis Logo" src="../images/Londis-Logo.jpg"
-                 style="width: 100px; height: auto;">
+<!-- Header  -->
+<div id="Header">
+    <nav class="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../images/Londis-Logo.jpg" alt="Londis Logo">
         </a>
-    </div>
-    <nav class="nav">
-        <ul>
-            <li><a href="../Pages/Login.html" target="_blank">Login</a></li>
-            <li><a href="../Pages/Orders.html">Orders</a></li>
-            <li><a href="../Pages/About.html">About</a></li>
-        </ul>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search for products.." class="search-bar">
+            <button class="search-btn">
+                <a href="Pages/Shop.html" style="text-decoration: none">🔍</a>
+            </button>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img src="../images/Navbar_Menu.png" alt="Menu" class="menu-icon">
+            </button>
+            <ul class="dropdown-content">
+                <li><a href="../Pages/Login.html" target="_blank">Login</a></li>
+                <li class="has-submenu">
+                    <a href="../Pages/Shop.html">Shop</a>
+                    <ul class="submenu">
+                        <li><a href="../Pages/Checkout.html">Checkout</a></li>
+                        <li><a href="../Pages/Orders.html">Orders</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Pages/About.html">About</a></li>
+                <li><a href="../Pages/News.html">News</a></li>
+            </ul>
+        </div>
     </nav>
+
 </div>
 
 <div id="content">
+    <div class="img_overlay"></div>
     <div id="login">
-        <h1>Login</h1>
+        <h1> <strong> Sign in </strong></h1>
         <form id="login-form">
-            <label for="username">Username</label>
-            <input id="username" name="username" placeholder="" type="text">
-            <label for="password">Password</label>
-            <input id="password" name="password" placeholder="" type="password">
-            <br>
+            <div class="form-item">
+                <label for="username">Username</label>
+                <input id="username" name="username" placeholder="Enter your username" type="text">
+            </div>
+            <div class="form-item">
+                <label for="password">Password</label>
+                <input id="password" name="password" placeholder="Enter your password" type="password">
+            </div>
+            <div class="form-item">
+                <label for="remember-me">Remember me</label>
+                <input type="checkbox" id="remember-me" name="remember-me">
+            </div>
+            <div class="form-item">
+                <input type="submit" value="Submit">
+            </div>
         </form>
-        <input type="submit" value="Submit"> </input>
         <h2>
-            <a href="https://loop.dcu.ie/login/index.php " target="_blank"> Sign in with Student Email</a>
+            <a href="https://loop.dcu.ie/login/index.php" target="_blank">Sign in with Student Email</a>
         </h2>
         <h1>Register here!</h1>
         <form id="register-form">
-            <a href="../Pages/Register.html" target="_blank"> Sign up</a>
+            <a href="../Pages/Register.html" target="_blank">Sign up</a>
         </form>
     </div>
 </div>
 
 <!-- Footer  -->
-<div id="footer">
+<footer id="footer" style="font-family: Lato, sans-serif">
     <div class="Socials">
         <p>Follow us on </p>
         <div class="social_media" style>
-            <img src="../images/facebook_logo.png" style="width: 50px; height: auto;"><img>
-            <img src="../images/twitter_logo.png" style="width: 50px; height: auto;"></img>
-            <img src="../images/instagram_logo.png" style="width: 50px; height: auto;"></img>
+            <img src="../images/icons/facebook_logo.png"
+                 style="width: 50px; height: auto;"><img>
+            <img src="../images/icons/Twitter_Logo.png" style="width: 50px; height: auto;"></img>
+            <img src="../images/icons/instagram_logo.png" style="width: 50px; height: auto;"></img>
         </div>
     </div>
     <div class="Contact">
-        <h1>
-            <a href="Contact.html" target="_blank"> Contact</a>
-        </h1>
+        <a href="../Pages/Contact.html" style="text-decoration: none" ;>
+            <h1>Contact Us</h1>
+        </a>
     </div>
     <div class="Legal">
         <h1>Legal</h1>
     </div>
-</div>
+</footer>
 
 </body>
 </html>

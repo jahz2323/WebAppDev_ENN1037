@@ -41,47 +41,58 @@
         </div>
     </nav>
 
-
 </div>
 
 <!-- Content  -->
 <div id="content">
-
-    <div class="text-container">
-        <h1>About</h1>
-        <h2>Where are we located?</h2>
-        <p>
-            We are located at <a href="https://www.google.ie/maps/place/Londis+DCU/@53.3851651,-6.2585775,17z/data=!3m1!4b1!4m6!3m5!1s0x48670fd0009e1525:0xffca4acbc1ecbf20!8m2!3d53.3851651!4d-6.2585775!16s%2Fg%2F11f6dvm769?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank " style="text-decoration-line: none; color: black;">
-            <strong >Ballymun Road, Dublin 9, Ireland</strong>
-        </a> within the Student Union Building.
-        </p>
-
-    <!-- Open Hours -->
-        <h2>Open Hours</h2>
-        <ul>
-            <li>Monday: 8 a.m.–10 p.m.</li>
-            <li>Tuesday: 8 a.m.–10 p.m.</li>
-            <li>Wednesday: 8 a.m.–10 p.m.</li>
-            <li>Thursday: 8 a.m.–10 p.m.</li>
-            <li>Friday: 8 a.m.–9 p.m.</li>
-            <li>Saturday: 8 a.m.–8 p.m.</li>
-            <li>Sunday: 10 a.m.–7 p.m.</li>
-        </ul>
-    </div>
-
-    <!-- Image Section -->
-    <div class="img_container">
-        <img alt="Student Union Building" src="../images/studentUnion.jpg" title="Student Union Building">
-    </div>
-
-    <!-- Services  -->
-    <div class="Services_group">
-        <h2>Our Services</h2>
+    <h1 style="text-align: center">About</h1>
+    <div id="Location_container">
+        <!-- Where are we located  -->
+        <div class="text-container">
+            <h2>Where are we located?</h2>
+            <p>
+                We are located at
+                <a
+                        href="https://www.google.ie/maps/place/Londis+DCU/@53.3851651,-6.2585775,17z/data=!3m1!4b1!4m6!3m5!1s0x48670fd0009e1525:0xffca4acbc1ecbf20!8m2!3d53.3851651!4d-6.2585775!16s%2Fg%2F11f6dvm769?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank " style="text-decoration-line: none; color: black;">
+                    <strong>Ballymun Road, Dublin 9, Ireland</strong>
+                </a> within the Student Union Building.
+            </p>
+            <!-- Open Hours -->
+            <h2>Open Hours</h2>
+            <ul>
+                <li>Monday: 8 a.m.–10 p.m.</li>
+                <li>Tuesday: 8 a.m.–10 p.m.</li>
+                <li>Wednesday: 8 a.m.–10 p.m.</li>
+                <li>Thursday: 8 a.m.–10 p.m.</li>
+                <li>Friday: 8 a.m.–9 p.m.</li>
+                <li>Saturday: 8 a.m.–8 p.m.</li>
+                <li>Sunday: 10 a.m.–7 p.m.</li>
+            </ul>
+        </div>
+        <!-- Image Section -->
         <div class="img_container">
-            <img alt="Services" src="../images/Fired_Pizza_Oven.jpg" title="Services">
+            <img alt="Student Union Building" src="../images/studentUnion.jpg" title="Student Union Building">
+            <!-- draw circle to highlight the location -->
+            <!-- Circle positioned relative to the image -->
+            <svg class="circle-overlay" width="55" height="55" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <circle cx="25" cy="25" r="25" stroke="red" stroke-width="2" fill="none"/>
+            </svg>
+        </div>
+    </div>
+    <!-- Services  -->
+    <h2 style="text-align: center; font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;">Our Services</h2>
+    <div id="Service_container">
+        <div id="Service_slideshow">
+            <img src="../images/About_imgs/Bewleys.jpg" alt="Food and Beverages">
+            <img src="../images/About_imgs/Rolls.jpg" alt="Bia Blas">
+            <img src="../images/Fired_Pizza_Oven.jpg" alt="Fired Pizza">
+            <img src="../images/About_imgs/CasaDeFuego.jpeg" alt="Burrito Bowls">
         </div>
         <div class="text-container">
-            <p>We offer a wide range of services including:</p>
+            <p style="padding-left: 50px">We offer a wide range of services including:</p>
             <ul>
                 <li>Food and Beverages</li>
                 <li>Bia Blas</li>
@@ -91,22 +102,28 @@
         </div>
     </div>
 
-    <!-- Team  -->
-    <div class="Team_group">
-        <h2>Our Team</h2>
+    <div id="Team_container">
+        <!-- Team  -->
         <div class="text-container">
+            <h2>Our Team</h2>
             <p>
-                At DCU Londis, we’re proud to have a dedicated and hardworking team that is always ready to go the extra mile for our customers. Each member brings a unique set of skills, a friendly attitude, and a commitment to excellence, making us a reliable and trusted part of the DCU community.
+                At DCU Londis, we’re proud to have a dedicated and hardworking team that is always ready to go the extra
+                mile for our customers. Each member brings a unique set of skills, a friendly attitude, and a commitment
+                to excellence, making us a reliable and trusted part of the DCU community.
             </p>
             <p>
-                From our front-line staff to our behind-the-scenes heroes, our team is what makes DCU Londis a place you can count on for all your everyday needs. We’re here to serve with a smile and ensure that every visit is a great experience!
+                From our front-line staff to our behind-the-scenes heroes, our team is what makes DCU Londis a place you
+                can count on for all your everyday needs. We’re here to serve with a smile and ensure that every visit
+                is a great experience!
             </p>
         </div>
-        <div class="img_container">
+        <div class="Team_img_container">
             <img alt="Team" src="../images/HappyLondisWorker_1.png" title="Team">
+            <img alt="Team" src="../images/About_imgs/Employee1.jpg" title="Team">
+            <img alt="Team" src="../images/About_imgs/Employees2.jpg" title="Team">
+            <img alt="Team" src="../images/About_imgs/Employees3.jpg" title="Team">
         </div>
     </div>
-
 </div>
 
 <!-- Footer  -->
@@ -121,7 +138,7 @@
         </div>
     </div>
     <div class="Contact">
-        <a href="Pages/Contact.html" style="text-decoration: none" ;>
+        <a href="../Pages/Contact.html" style="text-decoration: none" ;>
             <h1>Contact Us</h1>
         </a>
     </div>

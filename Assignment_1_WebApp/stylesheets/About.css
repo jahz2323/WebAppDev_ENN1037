@@ -2,12 +2,14 @@
 body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     box-sizing: border-box;
+    font-family: Lato, sans-serif;
     a:visited {
         color: white;
     }
     a:link {
         color: white;
     }
+
 }
 
 /* The header and footer are styled to span the full width, with a background color and white text. Flexbox is used to evenly distribute content and align items centrally. */
@@ -23,11 +25,11 @@ body {
 /* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: center; /* Center everything */
+    justify-content: center;
     align-items: center;
     background-color: #3a5c69;
     padding: 15px 20px;
-    gap: 40px; /* Space between elements */
+    gap: 40px;
 }
 
 /* Logo */
@@ -170,43 +172,170 @@ body {
     background-color: #f1f1f1;
 }
 
-
-#content {
+/*content*/
+#content{
+    width: 100%;
+    height: 100%;
+    position: relative;
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    box-sizing: border-box;
+
 }
-section {
-    margin-bottom: 50px;
+#Location_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;           /* Adjusts height dynamically */
+    width: 100%;
+    margin-bottom: 45px;
+    padding: 20px;  /* Adds spacing */
+    gap: 20px;
 }
+
+/* Text container */
 .text-container {
-    background-color: #3a5c69;
-    display: block;
-    justify-content: flex-start;
-    margin-bottom: 20px;
-    ul{
-        float: left;
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+    li,ui,p{
+        list-style-type: none;
+        text-align: center;
+        padding: 5px;
+        margin-right: 35px;
+        font-size: 20px;
     }
 }
+
+/* Image container */
 .img_container {
-    margin: 20px 0;
+    flex: 1;              /* Takes equal space */
+    max-width: 70%;       /* Limits width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
+
+.circle-overlay {
+    position: absolute;
+    bottom: 90px;  /* Moves the circle 90px up from the bottom */
+    left: 70px;    /* Moves the circle 70px right from the left */
+}
+
+/* Ensure the image scales properly */
 .img_container img {
     max-width: 100%;
     height: auto;
-    border: 3px solid #bbbbbb;
     border-radius: 10px;
 }
-ul {
-    list-style-type: disc;
-    margin: 10px auto;
-    padding: 0;
-    width: fit-content;
+
+#Service_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 20px;
+    gap: 20px;
 }
-ul li {
-    text-align: left;
-    margin-bottom: 5px;
+
+/* Slideshow Container */
+#Service_slideshow {
+    flex:1;
+    width: 700px;  /* Adjust as needed */
+    height: 600px; /* Adjust as needed */
+    position: relative;
+    overflow: hidden;
 }
+
+/* All images inside slideshow */
+#Service_slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeSlideshow 12s infinite;
+    border-radius: 15px;
+}
+
+/* Delay each image */
+#Service_slideshow img:nth-child(1) {
+    animation-delay: 0s;
+}
+#Service_slideshow img:nth-child(2) {
+    animation-delay: 3s;
+}
+#Service_slideshow img:nth-child(3) {
+    animation-delay: 6s;
+}
+#Service_slideshow img:nth-child(4) {
+    animation-delay: 9s;
+}
+
+/* Keyframes for fade effect */
+@keyframes fadeSlideshow {
+    0% { opacity: 0; }
+    8% { opacity: 1; }
+    25% { opacity: 1; }
+    33% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+#Team_container {
+    display: flex;
+    flex-direction: column; /* Stack text and images */
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 40px 20px;
+    gap: 20px; /* Space between text and images */
+}
+
+/* Text container styles */
+.text-container {
+    max-width: 800px; /* Limit text width for better readability */
+}
+
+.text-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Image container (Flexbox for horizontal alignment) */
+.Team_img_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100%;
+}
+
+/* Individual images */
+.Team_img_container img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease-in-out;
+}
+
+.Team_img_container img:hover {
+    transform: scale(1.05);
+
+}
+
+
+
 footer  {
     text-align: center;
     flex: 1;

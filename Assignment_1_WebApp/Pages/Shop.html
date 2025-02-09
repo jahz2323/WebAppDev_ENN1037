@@ -6,86 +6,185 @@
     <link href="../stylesheets/Shop.css" rel="stylesheet"></link>
 </head>
 <body>
-<div id="header">
-    <div id="logo">
-        <a href="../index.html">
-            <img alt="Londis Logo" src="../images/Londis-Logo.jpg"
-                 style="width: 100px; height: auto;">
+<!-- Header  -->
+<div id="Header">
+    <nav class="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../images/Londis-Logo.jpg" alt="Londis Logo">
         </a>
-    </div>
-    <nav class="nav">
-        <ul>
-            <li><a href="../Pages/Login.html" target="_blank">Login</a></li>
-            <li><a href="../Pages/Orders.html">Orders</a></li>
-            <li><a href="../Pages/About.html">About</a></li>
-        </ul>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search for products.." class="search-bar">
+            <button class="search-btn">
+                <a href="../Pages/Shop.html" style="text-decoration: none">🔍</a>
+            </button>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img src="../images/Navbar_Menu.png" alt="Menu" class="menu-icon">
+            </button>
+            <ul class="dropdown-content">
+                <li><a href="../Pages/Login.html" target="_blank">Login</a></li>
+                <li class="has-submenu">
+                    <a href="../Pages/Shop.html">Shop</a>
+                    <ul class="submenu">
+                        <li><a href="../Pages/Checkout.html">Checkout</a></li>
+                        <li><a href="../Pages/Orders.html">Orders</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Pages/About.html">About</a></li>
+                <li><a href="../Pages/News.html">News</a></li>
+            </ul>
+        </div>
     </nav>
+
 </div>
 
 <div id="Content">
     <div id="Shop_container">
-        <h1>Shop</h1>
-        <div id="Shop_header" style="display: flex; justify-content: center; align-items: center">
-            <img alt="Shop Image" src="../images/londis_Shop.jpg" style="width:70%;" ></img>
-        </div>
-        <div id="Shop_content">
-            <div id="Shop_nav">
-                <form action>
-                    <label for="Products"> Filter: </label>
-                    <select name="Products" id="Products" >
-                        <option value="General" selected>General</option>
-                        <option value="Beverages"> Beverages</option>
-                        <option value="Food"> Food</option>
-                        <option value="Snacks"> Snacks</option>
-                    </select>
-                </form>
+        <h1> Browse all our products! </h1>
+
+        <h2>New in stock!!</h2>
+        <div id="Shop_top_container">
+            <!-- slideshow of products -->
+            <div class="slideshow_container">
+                <img src="../images/ShopProducts/Baileys.jpg"></img>
+                <img src="../images/ShopProducts/cadbury.jpg"></img>
+                <img src="../images/ShopProducts/KerryGoldCheese.jpeg"></img>
+                <img src="../images/ShopProducts/Moonju.jpeg"></img>
             </div>
-            <div id="Shop_products" style="margin: 40px; padding: 10px">
-                <div class="Shop_products_img">
-                    <img src="../images/ShopProducts/coca-cola-bottle-transparent-background-9-903137475.png" alt="coke">
-                    <h3>Coca Cola 500ml</h3>
-                    <p>2.49£</p>
-                    <button> Add to cart</button>
+        </div>
+        <div id="Shop_drop_wrapper">
+            <!-- Filter Dropdown -->
+            <div class="Shop_dropdown">
+                <h3>Search by Filter</h3>
+                <button class="Shop_dropbtn">Filter</button>
+                <button class="apply-filter">Apply</button>
+                <div class="Shop_dropdown-content">
+                    <a href="#">Drinks</a>
+                    <a href="#">Snacks</a>
+                    <a href="#">Dairy</a>
+                    <a href="#">Fruit & Veg</a>
+                    <a href="#">Frozen</a>
+                    <a href="#">Household</a>
+                    <a href="#">Health & Beauty</a>
+                    <a href="#">Bakery</a>
+                    <a href="#">Baby</a>
+                    <a href="#">Pet</a>
                 </div>
-                <div class="Shop_products_img">
-                    <img src="../images/ShopProducts/sprite_PNG8921-1557318537.png" alt="sprite">
-                    <h3>Sprite 500ml</h3>
-                    <p>2.49£</p>
-                    <button> Add to cart</button>
+            </div>
+
+            <!-- Sort Dropdown -->
+            <div class="Shop_dropdown">
+                <h3>Sort by</h3>
+                <button class="Shop_dropbtn">Sort</button>
+                <button class="apply-filter">Apply</button>
+                <div class="Shop_dropdown-content">
+                    <a href="#">Price: Low to High</a>
+                    <a href="#">Price: High to Low</a>
+                    <a href="#">Alphabetical</a>
                 </div>
-                <div class="Shop_products_img">
-                    <img src="../images/ShopProducts/fanta_PNG46-3521308670.png" alt="fanta">
-                    <h3>Fanta 500ml</h3>
-                    <p>2.49£</p>
-                    <button> Add to cart</button>
-                </div>
-                <div class="Shop_products_img">
-                    <img src="../images/ShopProducts/Southern-fried-chicken-fillet-rolls-recipe-banner-2050362663.jpg" alt="fanta">
-                    <h3>Chicken Fillet Roll</h3>
-                    <p>3.49£</p>
-                    <button> Add to cart</button>
+            </div>
+        </div>
+        <div id="Shop_main_container">
+            <div id="Product_container">
+                <div id="Product_listings">
+                    <div class="Product">
+                        <img src="../images/ShopProducts/Baileys.jpg"></img>
+                        <h3>Baileys Irish Cream Liqueur 500ml</h3>
+                        <p>€20.00</p>
+                        <div class="add-to-cart">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="Product">
+                        <img src="../images/ShopProducts/cadbury.jpg"></img>
+                        <h3>Cadbury Dairy Milk Chocolate 150g</h3>
+                        <p>€2.00</p>
+                        <div class="add-to-cart">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="Product">
+                        <img src="../images/ShopProducts/KerryGoldCheese.jpeg"></img>
+                        <h3>Kerrygold Dubliner Cheese 500g</h3>
+                        <p>€3.00</p>
+                        <div class="add-to-cart">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="Product">
+                        <img src="../images/ShopProducts/Moonju.jpeg"></img>
+                        <h3>Mooju Milk 500ml</h3>
+                        <p>€5.00</p>
+                        <div class="add-to-cart">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="Product">
+                        <img src="../images/ShopProducts/sheep-milk.webp"></img>
+                        <h3>Sheep Milk 1.5L</h3>
+                        <p>€6.00</p>
+                        <div class="add-to-cart">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="Product">
+                        <img src="../images/ShopProducts/lynxFragrance.webp"></img>
+                        <h3>Lynx Blue Lavender 500ml</h3>
+                        <p>€5.00</p>
+                        <div class="add-to-cart">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="Product">
+                        <img src="../images/ShopProducts/fanta_PNG46-3521308670.png"></img>
+                        <h3>Fanta Orange 400mL</h3>
+                        <p>€2.00</p>
+                        <div class="add-to-cart">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="Product">
+                        <img src="../images/ShopProducts/Freddo.jpg"></img>
+                        <h3>Freddo bar 50g</h3>
+                        <p>€0.20</p>
+                        <div class="add-to-cart">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<div id="footer">
-    <div class="Socials">
-        <p>Follow us on </p>
-        <div class="social_media" style>
-            <img src="../images/facebook_logo.png" style="width: 50px; height: auto;"><img>
-            <img src="../images/twitter_logo.png" style="width: 50px; height: auto;"></img>
-            <img src="../images/instagram_logo.png" style="width: 50px; height: auto;"></img>
+    <!-- Footer  -->
+    <footer id="footer" style="font-family: Lato, sans-serif">
+        <div class="Socials">
+            <p>Follow us on </p>
+            <div class="social_media" style>
+                <img src="../images/icons/facebook_logo.png"
+                     style="width: 50px; height: auto;"><img>
+                <img src="../images/icons/Twitter_Logo.png" style="width: 50px; height: auto;"></img>
+                <img src="../images/icons/instagram_logo.png" style="width: 50px; height: auto;"></img>
+            </div>
         </div>
-    </div>
-    <div class="Contact">
-        <h1>Contact</h1>
-    </div>
-    <div class="Legal">
-        <h1>Legal</h1>
-    </div>
-</div>
-
+        <div class="Contact">
+            <a href="../Pages/Contact.html" style="text-decoration: none" ;>
+                <h1>Contact Us</h1>
+            </a>
+        </div>
+        <div class="Legal">
+            <h1>Legal</h1>
+        </div>
+    </footer>
 </body>
 </html>
