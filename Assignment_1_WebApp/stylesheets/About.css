@@ -78,7 +78,7 @@ body {
 
 /* Dropdown Menu Icon */
 .menu-icon {
-    width: 40px; /* Adjust size as needed */
+    width: 40px;
     height: 40px;
 }
 
@@ -243,8 +243,8 @@ body {
 /* Slideshow Container */
 #Service_slideshow {
     flex:1;
-    width: 700px;  /* Adjust as needed */
-    height: 600px; /* Adjust as needed */
+    width: 700px;
+    height: 600px;
     position: relative;
     overflow: hidden;
 }

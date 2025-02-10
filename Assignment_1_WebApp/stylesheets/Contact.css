@@ -1,88 +1,308 @@
+/* The body styling ensures that horizontal scrolling is prevented and the box-sizing is set to border-box to make width and height calculations more predictable. */
 body {
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     font-family: Lato, sans-serif;
+
+    a:visited {
+        color: white;
+    }
+
+    a:link {
+        color: white;
+    }
+
 }
-#header, #footer {
+
+/* The header and footer are styled to span the full width, with a background color and white text. Flexbox is used to evenly distribute content and align items centrally. */
+#header, footer {
     width: 100%;
+    height: auto;
     background-color: #3a5c69;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 10px 20px;
 }
-.nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
 
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3a5c69;
+    padding: 15px 20px;
+    gap: 40px;
 }
-.nav ul {
+
+/* Logo */
+.logo img {
+    height: 50px;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #bbbbbb;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background: #f9f9f9;
+}
+
+.search-bar {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    width: 400px;
+    background: none;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+/* Drop Button with Icon */
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Dropdown Menu Icon */
+.menu-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Styling the Dropdown List */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 100;
     list-style: none;
-
     padding: 0;
-    display: flex;
-    margin-right: 50px;
-}
-.nav ul li {
-    margin-left: 15px;
-}
-.nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    transition: transform 0.3s;
-}
-.nav ul, .nav li:hover, .nav.a:hover {
-    transition: all .5s;
-    transform: scale(1.1);
+    margin: 0;
 }
 
-#content {
-    padding: 20px;
-    max-width: 1600px;
-    margin: 0 auto;
+/* Dropdown List Items */
+.dropdown-content li {
+    position: relative;
+    border-bottom: 1px solid #ddd;
 }
-#Contact{
-    padding:20px;
+
+.dropdown-content li:last-child {
+    border-bottom: none;
+}
+
+/* Dropdown Links */
+.dropdown-content li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-family: Lato, sans-serif;
+    text-align: center;
+}
+
+/* Dropdown Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Multi-Level Submenu */
+.has-submenu {
+    position: relative;
+}
+
+/* Submenu Styling */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Positions submenu to the right */
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Submenu appears when hovering over "Orders" */
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+/* Submenu Items */
+.submenu li {
+    border-bottom: 1px solid #ddd;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+/* Submenu Links */
+.submenu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+/* Submenu Hover Effect */
+.submenu li a:hover {
+    background-color: #f1f1f1;
+}
+/* Main Contact Section: Center content and set background color */
+#Contact {
     display: flex;
-    flex-direction: column;
-    justify-content: left;
-    background-color: #3a5c69;
-    h1{
-        color: white;
-    }
-    p{
-        color: white;
-        text-align: left;
-    }
-    label{
-        max-width: 250px;
-        color: white;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-    }
-}
-.Button_Container{
+    flex-direction: row; /* Align elements in a row */
     justify-content: center;
     align-items: flex-start;
-    button{
-        width: 100%;
-        margin: 20px;
-        max-width: 250px;
-        color: white;
-        background-color: #3a5c69;
-        padding: 20px;
-        float: left;
+    background-color: #3a5c69;
+    padding: 20px;
+    gap: 60px; /* Increased gap for better spacing */
+    max-width: 1000px;
+    max-height: 800px;
+    margin: 20px auto;
+}
+
+/* Left Section: Text and Image Container */
+#left_section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 400px;
+}
+
+/* Contact Text Container: Center text and limit width */
+#Contact_text_container {
+    text-align: left;
+    max-width: 400px;
+    p{
+        font-size: 23px;
+    }
+    h1{
+        font-size: 40px;
     }
 }
-.input_box{
+
+#Contact_text_container h1,
+#Contact_text_container p {
+    color: white;
+}
+
+/* Contact Image Container: Stack contact info items in a column */
+#Contact_img_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* Contact Info Item: Align icon and text in a row */
+.contact_info_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.contact_info_item svg {
+    width: 24px;
+    height: 24px;
+}
+
+.contact_info_item a {
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+}
+
+/* Right Section: Contact Form Container */
+#contact_info_container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     width: 100%;
     max-width: 500px;
-    max-height: 200px;
-    font-family: "Comic Sans MS", cursive;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Fields: Stack inputs and adjust styles */
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-item input,
+.form-item select {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Message Input: Increase height */
+#message {
+    height: 120px;
+}
+
+/* Submit Button: Style and add hover effect */
+.form-item input[type="submit"] {
+    background-color: #3a5c69;
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+    font-size: 18px;
+}
+
+.form-item input[type="submit"]:hover {
+    background-color: #2a4854;
+}
+
+/* FAQ Section */
+#FAQ {
+    margin-top: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: auto;
+}
+
+footer  {
+    text-align: center;
+    flex: 1;
 }
