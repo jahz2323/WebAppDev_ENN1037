@@ -186,9 +186,13 @@ body {
     align-items: center;
 
 }
+/*
+    align img_overlay content behind login element
+    blur so user can focus on login element
+ */
 .img_overlay {
     position: absolute;
-    top: 100px;
+    top: 100px; /*fix for covering header*/
     width: 100%;
     height: 100%;
     background-image: url(../images/Londis_Front.jpg);
@@ -201,8 +205,14 @@ body {
     max-height: 1100px; /*Fix covering the footer*/
 }
 
+/*
+    login id
+    centred  elements
+    infront of img_overlay class
+    with boxshadow and rounded border
+ */
 #login {
-    position: relative;
+    position: relative; /* forward from img_overlay element */
     z-index: 2;
     display: flex;
     flex-direction: column; /* Stack h1 and h2 vertically */
@@ -232,7 +242,6 @@ body {
 #login-form {
     display: grid;
     gap: 20px;
-    align-items: center;
     width: 100%;
 
 }
@@ -248,7 +257,10 @@ label {
     font-weight: bold;
 }
 
-/* Inputs */
+/* styling for different input types
+    text and password
+
+*/
 input[type="text"],
 input[type="password"] {
     width: 100%;
@@ -258,7 +270,9 @@ input[type="password"] {
     font-size: 16px;
 
 }
-
+/*
+    submit styled as a button
+ */
 input[type="submit"] {
     padding: 12px;
     background-color: #606060;
@@ -272,7 +286,9 @@ input[type="submit"] {
     margin-right: 25px;
     margin-left: 30px;
 }
-
+/*
+    Hover stylinf to black when mouse over
+ */
 input[type="submit"]:hover {
     background-color: #000000;
 }

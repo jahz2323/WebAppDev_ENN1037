@@ -1,4 +1,4 @@
-/* The body styling ensures that horizontal scrolling is prevented and the box-sizing is set to border-box to make width and height calculations more predictable. */
+/* body styling ensures that horizontal scrolling is prevented and the box-sizing is set to border-box to make width and height calculations more predictable. */
 body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
     }
 }
 
-/* The header and footer are styled to span the full width, with a background color and white text. Flexbox is used to evenly distribute content and align items centrally. */
+/* header and footer are styled to span the full width, with a background color and white text. Flexbox is used to evenly distribute content and align items centrally. */
 #header, footer {
     width: 100%;
     height: auto;
@@ -66,7 +66,7 @@ body {
     position: relative;
 }
 
-/* Drop Button with Icon */
+/*DropButton with Icon */
 .dropbtn {
     background: none;
     border: none;
@@ -74,13 +74,13 @@ body {
     padding: 5px;
 }
 
-/* Dropdown Menu Icon */
+/*Dropdown Menu Icon */
 .menu-icon {
     width: 40px; /* Adjust size as needed */
     height: 40px;
 }
 
-/* Styling the Dropdown List */
+/* Styling theDropdown List */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -96,7 +96,7 @@ body {
     margin: 0;
 }
 
-/* Dropdown List Items */
+/*Dropdown List Items */
 .dropdown-content li {
     position: relative;
     border-bottom: 1px solid #ddd;
@@ -106,7 +106,7 @@ body {
     border-bottom: none;
 }
 
-/* Dropdown Links */
+/*Dropdown Links */
 .dropdown-content li a {
     display: block;
     padding: 10px;
@@ -117,7 +117,7 @@ body {
     text-align: center;
 }
 
-/* Dropdown Hover */
+/*Dropdown Hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -270,9 +270,9 @@ body {
 /* Help Box - Displays help descriptions in a row */
 #help_box {
     display: flex;
-    justify-content: center; /* Centers the help boxes horizontally */
+    justify-content: center; /* Center helpboxes */
     align-items: flex-start; /* Aligns items at the top */
-    gap: 40px; /* Adds spacing between the boxes */
+    gap: 40px;
     flex-wrap: wrap; /* Allows responsiveness */
     margin-top: 40px;
 }
@@ -318,13 +318,13 @@ body {
     margin-bottom: 50px;
 }
 
-/* The text area styling */
+/* text area styling */
 #Featured_text {
     flex: 1; /* Takes up remaining space */
     max-width: 50%; /* Ensures the text does not take up too much space */
 }
 
-/* The featured header and paragraph */
+/* featured header and paragraph */
 #Featured_text h1 {
     font-family: Lato, sans-serif;
     font-size: 30px;
@@ -369,17 +369,20 @@ body {
     color: black;
 }
 
-/* The slideshow wrapper has a calculated width for multiple slides and an infinite animation effect */
+/* slideshow wrapper has a calculated width for multiple slides and an infinite animation effect */
 .slide-wrapper {
     display: flex;
     width: calc(728px * 4);
     animation: slide 25s ease infinite;
 }
 
-/* Keyframe animation for slideshow transitions */
+/* Keyframe animation for slideshow transitions
+    total width -> from width: calc
+    switches context images based on width
+*/
 @keyframes slide {
     20% {
-        margin-left: 0px;
+        /* initial 0px*/
     }
     40% {
         margin-left: -728px;
@@ -391,7 +394,7 @@ body {
         margin-left: -2184px;
     }
     100% {
-        margin-left: 0px;
+        /* - will loop back */
     }
 }
 
@@ -426,7 +429,7 @@ body {
 
 /* Container for the stars, aligned horizontally */
 .Stars {
-    display: flex;           /* Aligns stars horizontally */
+    display: flex;
     justify-content: center; /* Centers the stars in the container */
     align-items: center;     /* Vertically aligns them */
     gap: 5px;                /* Space between stars */
@@ -434,8 +437,8 @@ body {
 
 /* You can apply a specific size to the SVG stars if necessary */
 .Stars svg {
-    width: 30px;  /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
+    width: 30px;
+    height: 30px;
 }
 
 
@@ -484,12 +487,17 @@ body {
     border-radius: 250px;
 }
 
-/* Animation applied to review wrapper for smooth scrolling effects. */
+/* Animation applied to review wrapper for smooth scrolling effects.
+
+ */
 .review_wrapper{
     width: calc(800px * 3);
     position: relative;
     animation: scroll 40s ease-out forwards infinite;
 }
+/* vertical scroll
+    from top end to bottom
+ */
 @keyframes scroll {
     from { top: 700px; }
     to { top: -700px; }
