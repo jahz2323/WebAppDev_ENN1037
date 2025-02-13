@@ -178,7 +178,7 @@ body {
     width: 100%;
 }
 
-/* Slideshow Container (Centered) */
+/* Slideshow Container */
 #Shop_top_container {
     display: flex;
     justify-content: center;
@@ -223,30 +223,64 @@ body {
     33% { opacity: 0; }
     100% { opacity: 0; }
 }
-/* Parent Wrapper to Align Filters Side by Side */
+
+#cart-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+
+#cart-wrapper {
+    margin-top: 10px;
+}
+
+#products-imgs img {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+}
+
+#order-btn {
+    background: #ff4e4e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+#order-btn:hover {
+    background: #71b1ce;
+}
+
 #Shop_drop_wrapper {
     background-color: #3a5c69;
     display: flex;
+    width: 100%;
     top:200px;
-    gap: 1300px;  /* Add spacing between filter & sort */
+    gap: 10px;  /* Add spacing between filter & sort */
 }
 
 /* Filter Sidebar */
 .Shop_dropdown {
-    width: 300px;
+    width: 150px;
     text-align: center;
-    position: relative;  /* Ensure dropdown aligns correctly */
+    position: relative;
     color: white;
 }
-
-/* Dropdown Button */
 .Shop_dropbtn {
     background-color: #71b1ce;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
-    cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
     width: 100%;
@@ -256,22 +290,20 @@ body {
 .Shop_dropdown-content {
     display: none;
     background-color: #3a5c69;
-    width: 100%;  /* Full width of parent */
-    max-height: 500px;  /* Set max height */
-    overflow-y: auto;  /* Enable scrolling */
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     position: absolute;
     left: 0;
-    z-index: 10;  /* Ensure it appears above */
-}
 
-/* Show dropdown on hover */
+}
 .Shop_dropdown:hover .Shop_dropdown-content {
     display: block;
 }
 
-/* Dropdown Links */
+
 .Shop_dropdown-content a {
     display: flex;
     padding: 10px;
@@ -282,7 +314,6 @@ body {
     transition: background-color 0.2s ease;
 }
 
-/* Hover effect for dropdown items */
 
 .Shop_dropdown-content a:hover {
     background-color: #648d0a;
@@ -302,12 +333,9 @@ body {
     width: 100%;
 }
 
-/* Apply Button Hover Effect */
 .apply-filter:hover {
-    background-color: #4f7480; /*Lighter shade */
+    background-color: #4f7480;
 }
-
-/* Main Content Layout */
 
 #Shop_main_container {
     display: flex;
@@ -318,10 +346,9 @@ body {
     max-width: 1300px;
     margin: 0 auto;
     height: 700px;
-    overflow-y: auto;  /* Enable  scrolling when content overflows */
+    overflow-y: auto;
 }
 
-/* Product Listings Grid */
 #Product_container {
     display: flex;
     flex-direction: column;
@@ -340,7 +367,6 @@ body {
     height: 100%;
 }
 
-/* Product Box */
 .Product {
     background: white;
     padding: 15px;
@@ -354,7 +380,6 @@ body {
     justify-content: space-between;
 }
 
-/* Ensure image sizes are consistent */
 .Product img {
     width: 100%;
     height: 120px;

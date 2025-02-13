@@ -3,8 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <title>News</title>
+    <link rel="stylesheet" href="../stylesheets/News.css">
 </head>
 <body>
+<div id="Header">
+    <nav class="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../images/Londis-Logo.jpg" alt="Londis Logo">
+        </a>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search for products.." class="search-bar">
+            <button class="search-btn">
+                <a href="Shop.html" style="text-decoration: none">🔍</a>
+            </button>
+        </div>
+
+        <!-- Change with dynamic menu Assignment 2 -->
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img src="../images/Navbar_Menu.png" alt="Menu" class="menu-icon">
+            </button>
+            <ul class="dropdown-content">
+                <li><a href="Login.html" target="_blank">Login</a></li>
+                <li class="has-submenu">
+                    <a href="Shop.html">Shop</a>
+                    <ul class="submenu">
+                        <li><a href="Checkout.html">Checkout</a></li>
+                        <li><a href="Orders.html">Orders</a></li>
+                    </ul>
+                </li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="News.html">News</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div id="content">
+    <div class="news-container">
+        <!-- Video Description Section -->
+        <!-- Update the description when content is selected
+            giving the user more information about the video
+            or image they are viewing
+
+        -->
+
+        <div id="video-description">
+            <h2>Displaying..</h2>
+            <p id="current-video-text">Click on a recent post to learn more!</p>
+        </div>
+
+        <!-- Scrollable News Feed -->
+        <div class="news">
+            <h1>News</h1>
+            <div class="news-feed">
+                <div class="news_content">
+                    <div class="timestamp">Posted: 2 hours ago</div>
+                    <h1>Giveaway!</h1>
+                    <video controls>
+                        <source src="../videos/Giveaway.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Check out our latest giveaway!</p>
+                </div>
+                <div class="news_content">
+                    <div class="timestamp">Posted: 1 day ago</div>
+                    <h1>New in Store!</h1>
+                    <video controls >
+                        <source src="../videos/NewInStore.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>New mini eggs in stock!</p>
+                </div>
+                <div class="news_content">
+                    <div class="timestamp">Posted: 3 days ago</div>
+                    <h1>Fired Pizza Promotion!</h1>
+                    <video controls>
+                        <source src="../videos/Pizza.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Our Fired Pizza is providing students with a special promotion!</p>
+                </div>
+                <div class="news_content">
+                    <div class="timestamp">Posted: 5 days ago</div>
+                    <h1>Londis Waffles</h1>
+                    <img src="../images/ShopProducts/Waffles.png" alt="Waffles" class="news_image">
+                    <p>Our new waffles are now available in store!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer id="footer" style="font-family: Lato, sans-serif">
+    <div class="Socials">
+        <p>Follow us on</p>
+        <div class="social_media">
+            <a href="https://www.facebook.com/glasnevincampus/" target="_blank">
+                <img src="../images/icons/facebook_logo.png" style="width: 50px; height: auto;" alt="Facebook">
+            </a>
+            <a href="https://x.com/LondisDCU/status/1254077292667691008" target="_blank">
+                <img src="../images/icons/Twitter_Logo.png" style="width: 50px; height: auto;" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/londisdcu/?hl=en" target="_blank">
+                <img src="../images/icons/instagram_logo.png" style="width: 50px; height: auto;" alt="Instagram">
+            </a>
+        </div>
+    </div>
+    <div class="Contact">
+        <a href="../Pages/Contact.html" style="text-decoration: none;">
+            <h1>Contact Us</h1>
+        </a>
+    </div>
+</footer>
+
 
 </body>
 </html>

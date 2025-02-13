@@ -174,15 +174,15 @@ body {
 .submenu li a:hover {
     background-color: #f1f1f1;
 }
-/* Main Contact Section: Center content and set background color */
+/* Main Contact Section */
 #Contact {
     display: flex;
-    flex-direction: row; /* Align elements in a row */
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     background-color: #3a5c69;
     padding: 20px;
-    gap: 60px; /* Increased gap for better spacing */
+    gap: 60px;
     max-width: 1000px;
     max-height: 800px;
     margin: 20px auto;
@@ -269,12 +269,10 @@ body {
     font-size: 16px;
 }
 
-/* Message Input: Increase height */
 #message {
     height: 120px;
 }
 
-/* Submit Button: Style and add hover effect */
 .form-item input[type="submit"] {
     background-color: #3a5c69;
     color: white;

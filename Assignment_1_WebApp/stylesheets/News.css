@@ -1,8 +1,7 @@
-/* The body styling ensures that horizontal scrolling is prevented and the box-sizing is set to border-box to make width and height calculations more predictable. */
+/* body styling ensures that horizontal scrolling is prevented and the box-sizing is set to border-box to make width and height calculations more predictable. */
 body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     box-sizing: border-box;
-    font-family: Lato, sans-serif;
 
     a:visited {
         color: white;
@@ -11,10 +10,9 @@ body {
     a:link {
         color: white;
     }
-
 }
 
-/* The header and footer are styled to span the full width, with a background color and white text. Flexbox is used to evenly distribute content and align items centrally. */
+/* header and footer are styled to span the full width, with a background color and white text. Flexbox is used to evenly distribute content and align items centrally. */
 #header, footer {
     width: 100%;
     height: auto;
@@ -28,11 +26,11 @@ body {
 /* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center everything */
     align-items: center;
     background-color: #3a5c69;
     padding: 15px 20px;
-    gap: 40px;
+    gap: 40px; /* Space between elements */
 }
 
 /* Logo */
@@ -71,7 +69,7 @@ body {
     position: relative;
 }
 
-/* Drop Button with Icon */
+/*DropButton with Icon */
 .dropbtn {
     background: none;
     border: none;
@@ -79,13 +77,13 @@ body {
     padding: 5px;
 }
 
-/* Dropdown Menu Icon */
+/*Dropdown Menu Icon */
 .menu-icon {
     width: 40px;
     height: 40px;
 }
 
-/* Styling the Dropdown List */
+/* Styling theDropdown List */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -101,7 +99,7 @@ body {
     margin: 0;
 }
 
-/* Dropdown List Items */
+/*Dropdown List Items */
 .dropdown-content li {
     position: relative;
     border-bottom: 1px solid #ddd;
@@ -111,7 +109,7 @@ body {
     border-bottom: none;
 }
 
-/* Dropdown Links */
+/*Dropdown Links */
 .dropdown-content li a {
     display: block;
     padding: 10px;
@@ -122,7 +120,7 @@ body {
     text-align: center;
 }
 
-/* Dropdown Hover */
+/*Dropdown Hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -174,130 +172,121 @@ body {
 .submenu li a:hover {
     background-color: #f1f1f1;
 }
-#checkout_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
-#checkout_info{
-    padding: 20px;
-    margin: 10px;
-    background-color: #3a5c69;
-    color: white;
-}
 
-#checkout_info b{
-    color: #32ff00;
-}
-
-#checkout_timetable{
-    padding: 20px;
-    margin: 10px;
-    box-shadow: #3a5c69 0px 0px 10px;
-    width: 20%;
-    text-align: center;
-    font-size: 20px;
-}
-
-#checkout_timetable #Timetable{
+#content {
+    font-family: Lato, sans-serif;
     width: 100%;
-}
-#return-btn{
-    background: #ff4c4c;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    margin-top: 15px;
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: background 0.3s ease;
-}
-#return-btn:hover{
-    background: #ff3333;
-}
-
-#transaction_container{
+    margin: 0 auto;
+    background-color: #2c3e50; /* Darker background for contrast */
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+
+}
+
+/* News Container */
+.news-container {
+    display: flex;
+    gap: 50px; /* Space between video and news */
+    width: 800px;
     background: #3a5c69;
-    color: white;
-    padding: 50px;
-    width: 50%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.transaction_method{
-    width: 100%;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.transaction_method input, .transaction_method select{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.checkout_final{
-    width: 100%;
-    padding: 35px;
-    margin: 20px;
-    background: #3a5c69;
-    color: white;
+/* Video Description Box */
+#video-description {
+    width: 500px;
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    align-self: flex-start;
 }
 
-.checkout_final form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    label{
-        font-size: 20px;
-        padding: 20px;
-    }
-    input{
-        width: 20%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 16px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-}
-
-.checkout_final button{
-    background-color: #b1ff98;
-    color: black;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
+#video-description h2 {
     font-size: 18px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    margin-bottom: 10px;
 }
 
-.checkout_final button:hover{
-    background-color: #28cc00;
+#current-video-text {
+    font-size: 14px;
+    color: #555;
 }
 
-
-footer  {
+/* News Container */
+.news {
+    width: 350px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    flex: 1;
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Scrollable Feed */
+.news-feed {
+    max-height: 500px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #aaa transparent;
+    padding-right: 5px;
+}
+
+/* Individual News Posts */
+.news_content {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    h1 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    video {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+}
+
+/* Image Styling */
+.news_image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* Paragraph Text */
+.news_content p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Hide scrollbar in WebKit browsers  w3schools custom scrollbar */
+.news-feed::-webkit-scrollbar {
+    width: 5px;
+}
+
+.news-feed::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+}
+
+.news-feed::-webkit-scrollbar-track {
+    background: transparent;
 }

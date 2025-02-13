@@ -42,6 +42,8 @@
 
 
 <!--
+    SHOP PAGE
+
     Shop container
 
     Shop_dropdown- contains the filter and sort dropdowns
@@ -58,7 +60,6 @@
 <div id="Content">
     <div id="Shop_container">
         <h1> Browse all our products! </h1>
-        <h2>New in stock!!</h2>
         <div id="Shop_top_container">
             <!-- slideshow of products -->
             <div class="slideshow_container">
@@ -66,6 +67,20 @@
                 <img src="../images/ShopProducts/cadbury.jpg"></img>
                 <img src="../images/ShopProducts/KerryGoldCheese.jpeg"></img>
                 <img src="../images/ShopProducts/Moonju.jpeg"></img>
+
+            </div>
+        </div>
+        <div id="cart-container">
+            <div id="cart-wrapper">
+                <h2>Items in Cart:</h2>
+                <div id="products-imgs">
+                    <img src="../images/ShopProducts/coca-cola-bottle-transparent-background-9-903137475.png" alt="Coca-Cola Bottle">
+                </div>
+                <p>€2.00</p>
+                <a href="../Pages/Orders.html">
+                    <button id="order-btn">Proceed to Orders</button>
+                </a>
+
             </div>
         </div>
         <div id="Shop_drop_wrapper">
@@ -99,6 +114,8 @@
                 </div>
             </div>
         </div>
+        <!-- Main Product Container -->
+
         <div id="Shop_main_container">
             <div id="Product_container">
                 <div id="Product_listings">
@@ -179,24 +196,27 @@
     </div>
 </div>
     <!-- Footer  -->
-    <footer id="footer" style="font-family: Lato, sans-serif">
-        <div class="Socials">
-            <p>Follow us on </p>
-            <div class="social_media" style>
-                <img src="../images/icons/facebook_logo.png"
-                     style="width: 50px; height: auto;"><img>
-                <img src="../images/icons/Twitter_Logo.png" style="width: 50px; height: auto;"></img>
-                <img src="../images/icons/instagram_logo.png" style="width: 50px; height: auto;"></img>
-            </div>
-        </div>
-        <div class="Contact">
-            <a href="../Pages/Contact.html" style="text-decoration: none" ;>
-                <h1>Contact Us</h1>
+<footer id="footer" style="font-family: Lato, sans-serif">
+    <div class="Socials">
+        <p>Follow us on</p>
+        <div class="social_media">
+            <a href="https://www.facebook.com/glasnevincampus/" target="_blank">
+                <img src="../images/icons/facebook_logo.png" style="width: 50px; height: auto;" alt="Facebook">
+            </a>
+            <a href="https://x.com/LondisDCU/status/1254077292667691008" target="_blank">
+                <img src="../images/icons/Twitter_Logo.png" style="width: 50px; height: auto;" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/londisdcu/?hl=en" target="_blank">
+                <img src="../images/icons/instagram_logo.png" style="width: 50px; height: auto;" alt="Instagram">
             </a>
         </div>
-        <div class="Legal">
-            <h1>Legal</h1>
-        </div>
-    </footer>
+    </div>
+    <div class="Contact">
+        <a href="../Pages/Contact.html" style="text-decoration: none;">
+            <h1>Contact Us</h1>
+        </a>
+    </div>
+</footer>
+</div>
 </body>
 </html>

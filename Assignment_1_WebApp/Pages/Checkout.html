@@ -6,38 +6,66 @@
     <link rel="stylesheet" href="../stylesheets/Checkout.css"></link>
 </head>
 <body>
-<div id="header">
-    <div id="logo">
-        <a href="../index.html">
-            <img alt="Londis Logo" src="../images/Londis-Logo.jpg"
-                 style="width: 100px; height: auto;">
+<!-- Header  -->
+<div id="Header">
+    <nav class="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../images/Londis-Logo.jpg" alt="Londis Logo">
         </a>
-    </div>
-    <nav class="nav">
-        <ul>
-            <li><a href="../Pages/Login.html" target="_blank">Login</a></li>
-            <li><a href="../Pages/Orders.html">Orders</a></li>
-            <li><a href="../Pages/About.html">About</a></li>
-        </ul>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search for products.." class="search-bar">
+            <button class="search-btn">
+                <a href="Pages/Shop.html" style="text-decoration: none">🔍</a>
+            </button>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img src="../images/Navbar_Menu.png" alt="Menu" class="menu-icon">
+            </button>
+            <ul class="dropdown-content">
+                <li><a href="../Pages/Login.html" target="_blank">Login</a></li>
+                <li class="has-submenu">
+                    <a href="../Pages/Shop.html">Shop</a>
+                    <ul class="submenu">
+                        <li><a href="../Pages/Checkout.html">Checkout</a></li>
+                        <li><a href="../Pages/Orders.html">Orders</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Pages/About.html">About</a></li>
+                <li><a href="../Pages/News.html">News</a></li>
+            </ul>
+        </div>
     </nav>
+
+</div>
 </div>
 <!-- user decides what time to collect,  -->
 <div id="content">
-    <h1>Checkout</h1>
+
+
     <div id="checkout_container">
-        <div id="checkout_info">
-            <h1>How it works</h1>
-            <p>Select what time you want to collect your item from the timetable</p>
-            <p> <b>Note*</b> Collection prior to the time is acceptable but orders not collected after closing times will be refunded with a penalty fee</p>
+        <div id="ReturnOrders">
+            <button id="return-btn">
+                <a href="../Pages/Orders.html" style="text-decoration-line: none;"> Return to Orders </a>
+            </button>
         </div>
+        <div id="checkout_info">
+            <h1>Click and Collect</h1>
+            <p>Select what time you want to collect your item from the timetable</p>
+            <p><b>Note*</b> Collection prior to the time is acceptable but orders not collected after closing times will
+                be refunded with a penalty fee</p>
+        </div>
+
         <div id="checkout_timetable">
             <!-- Real time update with day and time passed-->
             <!-- This example will be for Friday -->
             <!-- <li>Friday: 8 a.m.–9 p.m.</li> -->
             <form action>
-                <label for="Timetable"> Select time: </label>
+                <label for="Timetable"> Select time for collection: </label>
                 <!-- TIME INTERVAL 15 MIN  max 1 hr -->
-                <select name="Timetable" id="Timetable" >
+                <select name="Timetable" id="Timetable">
                     <option value="8AM">8:00</option>
                     <option value="8:15 AM">8:15</option>
                     <option value="8:30 AM">8:30</option>
@@ -46,34 +74,36 @@
                 </select>
             </form>
         </div>
+
+
         <div id="transaction_container">
             <h1>Payment method</h1>
-            <div class = "transaction_method">
+            <div class="transaction_method">
                 <form action>
                     <label for="Payment_method">Payment method: </label>
                     <select name="Payment_method" id="Payment_method">
-                        <option value = "Cash">Cash</option>
-                        <option value = "Card">Card</option>
+                        <option value="Cash">Cash</option>
+                        <option value="Card">Card</option>
                         <!-- If card is selected - check if revolute or mastercard -->
                     </select>
                 </form>
                 <form id="payment_form">
-                    <label for="Card_number" >Card number: </label>
+                    <label for="Card_number">Card number: </label>
                     <br>
                     <input type="number" id="Card_number" name="Credit Card_number" min="10000" max="100000">
                     <br>
-                    <label for="Cardholder_name" >Name on card: </label>
+                    <label for="Cardholder_name">Name on card: </label>
                     <br>
                     <input type="text" id="Cardholder_name" name="Cardholder_name" min="10000" max="100000"></input>
                     <br>
-                    <label for="CVV" >CVV: </label>
+                    <label for="CVV">CVV: </label>
                     <br>
                     <input type="number" id="CVV" name="CVV" min="10000" max="100000"></input>
                 </form>
-<!--                <label for="Payment_amount" class="label">Payment amount: </label>-->
-<!--                <input type="text" name="Payment_amount" id="Payment_amount"></input>-->
+                <!--                <label for="Payment_amount" class="label">Payment amount: </label>-->
+                <!--                <input type="text" name="Payment_amount" id="Payment_amount"></input>-->
             </div>
-            <div class = "checkout_final">
+            <div class="checkout_final">
                 <form action>
                     <label for="Payment_amount">Payment amount: </label>
                     <input type="number" id="Payment_amount" name="Payment_amount" min="10000"></input>
@@ -84,21 +114,28 @@
         </div>
     </div>
 </div>
-<div id="footer">
+<!-- Footer  -->
+<footer id="footer" style="font-family: Lato, sans-serif">
     <div class="Socials">
-        <p>Follow us on </p>
-        <div class="social_media" style>
-            <img src="../images/facebook_logo.png" style="width: 50px; height: auto;"><img>
-            <img src="../images/twitter_logo.png" style="width: 50px; height: auto;"></img>
-            <img src="../images/instagram_logo.png" style="width: 50px; height: auto;"></img>
+        <p>Follow us on</p>
+        <div class="social_media">
+            <a href="https://www.facebook.com/glasnevincampus/" target="_blank">
+                <img src="../images/icons/facebook_logo.png" style="width: 50px; height: auto;" alt="Facebook">
+            </a>
+            <a href="https://x.com/LondisDCU/status/1254077292667691008" target="_blank">
+                <img src="../images/icons/Twitter_Logo.png" style="width: 50px; height: auto;" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/londisdcu/?hl=en" target="_blank">
+                <img src="../images/icons/instagram_logo.png" style="width: 50px; height: auto;" alt="Instagram">
+            </a>
         </div>
     </div>
     <div class="Contact">
-        <h1>Contact</h1>
+        <a href="../Pages/Contact.html" style="text-decoration: none;">
+            <h1>Contact Us</h1>
+        </a>
     </div>
-    <div class="Legal">
-        <h1>Legal</h1>
-    </div>
-</div>
+</footer>
+
 </body>
 </html>
