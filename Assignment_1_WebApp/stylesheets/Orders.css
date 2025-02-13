@@ -1,43 +1,175 @@
+/* The body styling ensures that horizontal scrolling is prevented and the box-sizing is set to border-box to make width and height calculations more predictable. */
 body {
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     font-family: Lato, sans-serif;
+    a:visited {
+        color: white;
+    }
+    a:link {
+        color: white;
+    }
+
 }
-#header, #footer {
+
+/* The header and footer are styled to span the full width, with a background color and white text. Flexbox is used to evenly distribute content and align items centrally. */
+#header, footer {
     width: 100%;
+    height: auto;
     background-color: #3a5c69;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 10px 20px;
 }
-.nav {
+/* Navbar Styling */
+.navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-
+    background-color: #3a5c69;
+    padding: 15px 20px;
+    gap: 40px;
 }
-.nav ul {
+
+/* Logo */
+.logo img {
+    height: 50px;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #bbbbbb;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background: #f9f9f9;
+}
+
+.search-bar {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    width: 400px;
+    background: none;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+/* Drop Button with Icon */
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Dropdown Menu Icon */
+.menu-icon {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+}
+
+/* Styling the Dropdown List */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 100;
     list-style: none;
     padding: 0;
-    display: flex;
-    margin-right: 50px;
+    margin: 0;
 }
-.nav ul li {
-    margin-left: 15px;
+
+/* Dropdown List Items */
+.dropdown-content li {
+    position: relative;
+    border-bottom: 1px solid #ddd;
 }
-.nav ul li a {
-    color: white;
+
+.dropdown-content li:last-child {
+    border-bottom: none;
+}
+
+/* Dropdown Links */
+.dropdown-content li a {
+    display: block;
+    padding: 10px;
     text-decoration: none;
+    color: black;
     font-size: 15px;
-    transition: transform 0.3s;
+    font-family: Lato, sans-serif;
+    text-align: center;
 }
-.nav ul, .nav li:hover, .nav.a:hover {
-    transition: all .5s;
-    transform: scale(1.1);
+
+/* Dropdown Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Multi-Level Submenu */
+.has-submenu {
+    position: relative;
+}
+
+/* Submenu Styling */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Positions submenu to the right */
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Submenu appears when hovering over "Orders" */
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+/* Submenu Items */
+.submenu li {
+    border-bottom: 1px solid #ddd;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+/* Submenu Links */
+.submenu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+/* Submenu Hover Effect */
+.submenu li a:hover {
+    background-color: #f1f1f1;
 }
 
 #content {
@@ -54,28 +186,109 @@ body {
         float: left;
     }
 }
-.Shopping_cart{
-    margin: 60px;
+
+.Shopping_cart {
+    margin: 60px auto;
     width: 70%;
     background-color: #ffffff;
     color: #000000;
-
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.column_labels{
-    /*display: flex;*/
-    /*flex-direction: column;*/
+.column_labels {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: #f1f1f1;
+    border-radius: 5px;
 }
 
-.Products{
-    display: flex;
-    justify-content: space-around;
+.column_labels label {
+    flex: 1;
+    text-align: center;
 }
+
+.Products {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.Product_image img {
+    width: 80px;
+    height: auto;
+}
+.Product_details,
+.Product_Price,
+.Product_quantity,
+.Product_Remove,
+.Product_total {
+    flex: 1;
+    text-align: center;
+}
+
+
+.Product_quantity input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #bbb;
+    padding: 5px;
+}
+
+.Product_Button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.Product_Button:hover {
+    background-color: #c9302c;
+}
+
+.totals {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 5px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.Checkout {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3a5c69;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.Checkout a {
+    color: white;
+    text-decoration: none;
+}
+
+.Checkout:hover {
+    background-color: #2d4b57;
+}
+
+
 #footer div {
     text-align: center;
     flex: 1;
-    height: auto;
-    width: 100%;
 }

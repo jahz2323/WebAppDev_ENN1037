@@ -9,25 +9,46 @@
 <!-- Check if logged in : JS -->
 <!-- before orders - check if user session is logged in/ if not -> bring to login , else continue -->
 <!-- Header  -->
-<div id="header">
-    <div id="logo">
-        <a href="../index.html">
-            <img alt="Londis Logo" src="../images/Londis-Logo.jpg"
-                 style="width: 100px; height: auto;">
+<div id="Header">
+    <nav class="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../images/Londis-Logo.jpg" alt="Londis Logo">
         </a>
-    </div>
-    <nav class="nav">
-        <ul>
-            <li><a href="../Pages/Login.html" target="_blank">Login</a></li>
-            <li><a href="../Pages/Orders.html">Orders</a></li>
-            <li><a href="../Pages/About.html">About</a></li>
-        </ul>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search for products.." class="search-bar">
+            <button class="search-btn">
+                <a href="../Pages/Shop.html" style="text-decoration: none">🔍</a>
+            </button>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img src="../images/Navbar_Menu.png" alt="Menu" class="menu-icon">
+            </button>
+            <ul class="dropdown-content">
+                <li><a href="../Pages/Login.html" target="_blank">Login</a></li>
+                <li class="has-submenu">
+                    <a href="../Pages/Shop.html">Shop</a>
+                    <ul class="submenu">
+                        <li><a href="../Pages/Checkout.html">Checkout</a></li>
+                        <li><a href="../Pages/Orders.html">Orders</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Pages/About.html">About</a></li>
+                <li><a href="../Pages/News.html">News</a></li>
+            </ul>
+        </div>
     </nav>
 </div>
+<!-- Container for Shopping cart summary
+    Column labels - in row format
+    below is the users shopping cart
+        image, product,price
+    Added input to add more or remove - Changes Total
+    Grand total container displays total shopping cart price
+-->
 <div id="content">
-    <div id="Content_H1" style="padding-left: 30px;">
-        <h1 style="color: white">Orders</h1>
-    </div>
     <div class="Shopping_cart">
         <h2>Order Summary</h2>
         <!-- Order summary details -->
@@ -39,25 +60,30 @@
             <label class="Product_Remove">Remove</label>
             <label class="Product_total">Total</label>
         </div>
-        <div class="Products">
-            <div class="Product_image">
-                <img alt="coke"
-                     src="../images/ShopProducts/coca-cola-bottle-transparent-background-9-903137475.png" style="width: 100px; height: auto;">
-            </div>
-            <div class="Product_details">
-                <h3> Coca Cola</h3>
-            </div>
-            <div class="Product_Price">
-                <p>£2.49</p>
-            </div>
-            <div class="Product_quantity">
-                <input id="quantity" max="10" min="1" name="quantity" type="number"></input>
-            </div>
-            <div class="Product_Remove">
-                <button class="Product_Button">Remove</button>
-            </div>
-            <div class="Product_total">
-                <p>£2.49</p>
+
+        <div id="cart_wrapper">
+            <div id="cart">
+                <div class="Products">
+                    <div class="Product_image">
+                        <img alt="coke"
+                             src="../images/ShopProducts/coca-cola-bottle-transparent-background-9-903137475.png" style="width: 100px; height: auto;">
+                    </div>
+                    <div class="Product_details">
+                        <h3> Coca Cola</h3>
+                    </div>
+                    <div class="Product_Price">
+                        <p>£2.49</p>
+                    </div>
+                    <div class="Product_quantity">
+                        <input id="quantity" max="10" min="1" name="quantity" type="number"></input>
+                    </div>
+                    <div class="Product_Remove">
+                        <button class="Product_Button">Remove</button>
+                    </div>
+                    <div class="Product_Total">
+                        <p>£2.49</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="totals">
@@ -71,21 +97,24 @@
 </div>
 
 <!-- Footer  -->
-<div id="footer">
+<footer id="footer" style="font-family: Lato, sans-serif">
     <div class="Socials">
         <p>Follow us on </p>
         <div class="social_media" style>
-            <img src="../images/facebook_logo.png" style="width: 50px; height: auto;"><img>
-            <img src="../images/twitter_logo.png" style="width: 50px; height: auto;"></img>
-            <img src="../images/instagram_logo.png" style="width: 50px; height: auto;"></img>
+            <img src="../images/icons/facebook_logo.png"
+                 style="width: 50px; height: auto;"><img>
+            <img src="../images/icons/Twitter_Logo.png" style="width: 50px; height: auto;"></img>
+            <img src="../images/icons/instagram_logo.png" style="width: 50px; height: auto;"></img>
         </div>
     </div>
     <div class="Contact">
-        <h1>Contact</h1>
+        <a href="../Pages/Contact.html" style="text-decoration: none" ;>
+            <h1>Contact Us</h1>
+        </a>
     </div>
     <div class="Legal">
         <h1>Legal</h1>
     </div>
-</div>
+</footer>
 </body>
 </html>
