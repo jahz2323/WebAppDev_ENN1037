@@ -4,79 +4,47 @@
     <meta charset="UTF-8">
     <title>DCU Londis C&C</title>
     <link href="stylesheets/styles.css" rel="stylesheet">
+    <script src="libs/jquery-3.7.1.min.js"></script>
+
 </head>
 <body>
-<!-- Header
-
-    - Logo
-    - Nav
-        - Login
-        - Orders
-        - About_imgs
-        - News
-
-    *Implementing dropdown menu bar to make it more user-friendly and discreet
--->
-
-<!-- * Header, footer comments in index.html -->
-
-
-<!-- Header, Contains Logo for Landing page navigation, Searchbar input for Shoppe navigation, Dropdown Menu for navigation to all pages -->
-<!--
-    Header
-        Input tag to get user input and button element for search
-        JS Functionality - {
-            - Take user input and use input for search parameter in Shop.html
-            -
-        }
-        Css styling - {
-            - take up width of page
-            - flex for row and column format
-                Logo - Search bar - Menu
-        }
-        Menu - on hover display list elements
-            Links to navigate to: About, Shop, Contact, News
-            Contains submenu for Shop, linking to Orders and Checkout
--->
-
-<!--
-    footer
-        links to Social Media, Contact page
--->
 
 <div id="Header">
     <nav class="navbar">
-        <a href="index.html" class="logo">
-            <img src="../Assignment_1_WebApp/images/Londis-Logo.jpg" alt="Londis Logo">
-        </a>
+        <div id="">
+            <a href="index.html" class="logo">
+                <img src="../Assignment_1_WebApp/images/Londis-Logo.jpg" alt="Londis Logo">
+            </a>
 
-        <div class="search-container">
-            <input type="text" placeholder="Search for products.." class="search-bar">
-            <button class="search-btn">
-                <a href="Pages/Shop.html" style="text-decoration: none">🔍</a>
-            </button>
-        </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search for products.." class="search-bar">
+                <button class="search-btn">
+                    <a href="Pages/Shop.html" style="text-decoration: none">🔍</a>
+                </button>
+            </div>
 
-        <!-- Change with dynamic menu Assignment 2 -->
-        <div class="dropdown">
-            <button class="dropbtn">
-                <img src="../Assignment_1_WebApp/images/Navbar_Menu.png" alt="Menu" class="menu-icon">
-            </button>
-            <ul class="dropdown-content">
-                <li><a href="Pages/Login.html" target="_blank">Login</a></li>
-                <li class="has-submenu">
-                    <a href="Pages/Shop.html">Shop</a>
-                    <ul class="submenu">
-                        <li><a href="Pages/Checkout.html">Checkout</a></li>
-                        <li><a href="Pages/Orders.html">Orders</a></li>
-                    </ul>
-                </li>
-                <li><a href="Pages/About.html">About</a></li>
-                <li><a href="Pages/News.html">News</a></li>
-            </ul>
+            <!-- Change with dynamic menu Assignment 2 -->
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <img src="../Assignment_1_WebApp/images/Navbar_Menu.png" alt="Menu" class="menu-icon">
+                </button>
+                <ul class="dropdown-content">
+                    <li><a href="Pages/Login.html" target="_blank">Login</a></li>
+                    <li class="has-submenu">
+                        <a href="Pages/Shop.html">Shop</a>
+                        <ul class="submenu">
+                            <li><a href="Pages/Checkout.html">Checkout</a></li>
+                            <li><a href="Pages/Orders.html">Orders</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Pages/About.html">About</a></li>
+                    <li><a href="Pages/News.html">News</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 </div>
+
 
 <!-- bulk of the content will be here -->
 <!-- Main content -->
@@ -229,7 +197,7 @@
                           d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z"/>
                 </g>
                 </svg>
-                <svg  xmlns="http://www.w3.org/2000/svg"
+                <svg xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1.44 -1.44 50.82 50.82"
                      xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="2.01348">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
@@ -239,7 +207,7 @@
                           d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z"/>
                 </g>
                 </svg>
-                <svg  xmlns="http://www.w3.org/2000/svg"
+                <svg xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1.44 -1.44 50.82 50.82"
                      xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="2.01348">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
@@ -249,7 +217,7 @@
                           d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z"/>
                 </g>
                 </svg>
-                <svg  xmlns="http://www.w3.org/2000/svg"
+                <svg xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1.44 -1.44 50.82 50.82"
                      xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="2.01348">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
@@ -259,7 +227,7 @@
                           d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z"/>
                 </g>
                 </svg>
-                <svg  xmlns="http://www.w3.org/2000/svg"
+                <svg xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1.44 -1.44 50.82 50.82"
                      xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="2.01348">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
@@ -339,13 +307,16 @@
             <p>Follow us on</p>
             <div class="social_media">
                 <a href="https://www.facebook.com/glasnevincampus/" target="_blank">
-                    <img src="../Assignment_1_WebApp/images/icons/facebook_logo.png" style="width: 50px; height: auto;" alt="Facebook">
+                    <img src="../Assignment_1_WebApp/images/icons/facebook_logo.png" style="width: 50px; height: auto;"
+                         alt="Facebook">
                 </a>
                 <a href="https://x.com/LondisDCU/status/1254077292667691008" target="_blank">
-                    <img src="../Assignment_1_WebApp/images/icons/Twitter_Logo.png" style="width: 50px; height: auto;" alt="Twitter">
+                    <img src="../Assignment_1_WebApp/images/icons/Twitter_Logo.png" style="width: 50px; height: auto;"
+                         alt="Twitter">
                 </a>
                 <a href="https://www.instagram.com/londisdcu/?hl=en" target="_blank">
-                    <img src="../Assignment_1_WebApp/images/icons/instagram_logo.png" style="width: 50px; height: auto;" alt="Instagram">
+                    <img src="../Assignment_1_WebApp/images/icons/instagram_logo.png" style="width: 50px; height: auto;"
+                         alt="Instagram">
                 </a>
             </div>
         </div>
@@ -356,7 +327,10 @@
         </div>
     </footer>
 
+    <script src="main.js">
 
+    </script>
+    /
 </div>
 </body>
 </html>

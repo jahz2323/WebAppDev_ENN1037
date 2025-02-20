@@ -10,6 +10,7 @@ body {
     }
 }
 
+
 /* header and footer are styled to span the full width, with a background color and white text. Flexbox is used to evenly distribute content and align items centrally. */
 #header, footer {
     width: 100%;
