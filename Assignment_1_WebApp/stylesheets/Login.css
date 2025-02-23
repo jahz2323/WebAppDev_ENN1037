@@ -15,30 +15,26 @@ body {
     }
 
 }
-
-/* The header and footer are styled to span the full width, with a background color and white text. Flexbox is used to evenly distribute content and align items centrally. */
-#header, footer {
-    width: 100%;
-    height: auto;
-    background-color: #3a5c69;
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-/* Navbar Styling */
-.navbar {
+/* header and footer are styled to span the full width, with a background color and white text. Flexbox is used to evenly distribute content and align items centrally. */
+.header_top {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 30px 20px;
     background-color: #3a5c69;
-    padding: 15px 20px;
-    gap: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 /* Logo */
+.logo {
+    position: absolute;
+    left: 20px;
+}
+
 .logo img {
     height: 50px;
+    width: auto;
 }
 
 /* Search Container */
@@ -49,6 +45,11 @@ body {
     border-radius: 20px;
     padding: 5px 10px;
     background: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.search-container:hover {
+    border-color: #3a5c69;
 }
 
 .search-bar {
@@ -58,6 +59,11 @@ body {
     font-size: 16px;
     width: 400px;
     background: none;
+    color: #333;
+}
+
+.search-bar::placeholder {
+    color: #999;
 }
 
 .search-btn {
@@ -65,118 +71,237 @@ body {
     border: none;
     cursor: pointer;
     font-size: 18px;
+    color: #3a5c69; /* Icon color */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-/* Dropdown Menu */
-.dropdown {
-    position: relative;
+.search-btn:hover {
+    color: #1e3a48; /* Darker icon color on hover */
 }
 
-/* Drop Button with Icon */
-.dropbtn {
-    background: none;
+.va_menu_icon {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 50px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
     border: none;
     cursor: pointer;
-    padding: 5px;
+    transition: background 0.3s;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    z-index: 99;
 }
 
-/* Dropdown Menu Icon */
-.menu-icon {
-    width: 40px;
-    height: 40px;
+.va_menu_icon:focus {
+    outline: none;
 }
 
-/* Styling the Dropdown List */
-.dropdown-content {
-    display: none;
+.va_menu_icon span {
+    display: block;
     position: absolute;
-    top: 100%;
+    top: 20px;
     left: 0;
-    background-color: white;
-    min-width: 150px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    z-index: 100;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    right: 0;
+    height: 6px;
+    background: #fff;
+    border-radius: 10px;
 }
 
-/* Dropdown List Items */
-.dropdown-content li {
-    position: relative;
-    border-bottom: 1px solid #ddd;
-}
-
-.dropdown-content li:last-child {
-    border-bottom: none;
-}
-
-/* Dropdown Links */
-.dropdown-content li a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-    font-size: 15px;
-    font-family: Lato, sans-serif;
-    text-align: center;
-}
-
-/* Dropdown Hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Multi-Level Submenu */
-.has-submenu {
-    position: relative;
-}
-
-/* Submenu Styling */
-.submenu {
-    display: none;
+.va_menu_icon span:before, .va_menu_icon span:after {
     position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background-color: #fff;
+    content: "";
+    border-radius: 10px;
+}
+
+.va_menu_icon span:before {
+    top: -14px;
+}
+
+.va_menu_icon span:after {
+    bottom: -14px;
+}
+
+.va_menu_icon-X span {
+    transition: background 0s 0.3s;
+}
+
+.va_menu_icon-X span:before, .va_menu_icon-X span:after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+}
+
+.va_menu_icon-X span:before {
+    transition-property: top, transform;
+}
+
+.va_menu_icon-X span:after {
+    transition-property: bottom, transform;
+}
+
+.va_menu_icon-X.is-active span {
+    background: none;
+}
+
+.va_menu_icon-X.is-active span:before {
     top: 0;
-    left: 100%; /* Positions submenu to the right */
-    background-color: white;
-    min-width: 150px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    transform: rotate(45deg);
 }
 
-/* Submenu appears when hovering over "Orders" */
-.has-submenu:hover .submenu {
+.va_menu_icon-X.is-active span:after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+.va_menu_icon-X.is-active span:before, .va_menu_icon-X.is-active span:after {
+    transition-delay: 0s, 0.3s;
+}
+
+nav {
+    position: absolute;
+    top: 30px;
+    left: 1850px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    z-index: 4;
+}
+.bubble_all {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #4f7480;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    z-index: 4;
+
+}
+.bubble_submenu{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    left: 100%;
+    top: 0;
+    transform: translate(10px, 0); /* Adjust as needed */
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    z-index: 4;
+
+}
+#sub_one, #sub_two, #sub_three, #sub_four, #sub_five, #sub_six {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    z-index: 3;
+    border-radius: 50%;
+    box-shadow: 0 0 15px -5px #111;
+    text-align: center;
+    background-color: #779ca8;
+}
+
+#sub_one {
+    left: 5px;
+    svg{
+        width: 70px;
+        margin-top: -45px;
+    }
+}
+
+#sub_two {
+    left: 75px;
+}
+#sub_three{
+    left: 150px;
+    svg{
+        transform: translateY(-385px);
+    }
+}
+#sub_four{
+    left: 225px;
+}
+#sub_five{
+    left: 300px;
+    svg {
+        transform: translateY(-10px);
+    }
+}
+#sub_six{
+    left: 375px;
+    svg {
+        transform: translateY(-385px);
+    }
+}
+#sub_one>h3, #sub_two>h3, #sub_three>h3, #sub_four>h3, #sub_five>h3, #sub_six>h3 {
+    position: absolute;
+    font-size: 16px;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#one {
     display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    z-index: 3;
+    box-shadow: 0 0 15px -5px #111;
+    text-align: center;
+    background-color: #779ca8;
+    font-family: Lato, sans-serif;
+    fill: black;
+    h3 {
+        position: absolute;
+        font-size: 16px;
+        color: #ffffff;
+        top: 55px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
-/* Submenu Items */
-.submenu li {
-    border-bottom: 1px solid #ddd;
+.bubble svg{
+    width: 40px;
+    margin-top: 12px;
+}
+.bubble svg:hover ~ h3 {
+    opacity: 1;
+}
+.bubble h3 {
+    opacity: 0;
+    transition: all 400ms;
+    -webkit-transition: all 600ms;
 }
 
-.submenu li:last-child {
-    border-bottom: none;
+#one svg {
+    width: 40px;
+    margin-top: 12px;
 }
 
-/* Submenu Links */
-.submenu li a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
-}
-
-/* Submenu Hover Effect */
-.submenu li a:hover {
-    background-color: #f1f1f1;
-}
 /* Login Section */
-#content {
+#Content {
     min-height: 100vh;
     padding: 20px;
     max-width: 1200px;
@@ -293,8 +418,25 @@ input[type="submit"]:hover {
     background-color: #000000;
 }
 
+input.error{
+    border: 1px solid red;
+}
+label.error{
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
 
 #footer div {
     text-align: center;
     flex: 1;
+}
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #3a5c69;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
