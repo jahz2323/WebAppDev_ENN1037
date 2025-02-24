@@ -15,7 +15,7 @@ $(document).ready(function () {
     validateForm();
 });
 jQuery.validator.addMethod("lettersonly", function (value, element) {
-    return this.optional(element) || /^[a-z\s]+$/i.test(value);
+    return this.optional(element) || /^[a-zA-Z\s]+$/i.test(value);
 });
 jQuery.validator.addMethod("cvv", function (value, element) {
     return this.optional(element) || /^[0-9]+$/i.test(value);
@@ -27,8 +27,7 @@ jQuery.validator.addMethod("month", function (value, element) {
 
 function validateForm() {
     let form = document.getElementById("payment_form");
-    //check if form is present
-
+    //check if form is present");
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
@@ -83,7 +82,19 @@ function validateForm() {
             return;
         }
 
+        //first confirm if user wants to submit the form
+        let confirmPayment = confirm("Are you sure you want to submit this payment with the following details: \n" +
+            "Card Number: " + card_number + "\n" +
+            "Cardholder Name: " + cardholder_name + "\n" +
+            "CVV: " + cvv + "\n" +
+            "Expiry Date: " + month + "/" + year + "\n" +
+            "Payment Amount: " + Payment_amount + "\n" +
+            "Time: " + time);
 
+        if (!confirmPayment) {
+            alert("Payment Form not submitted");
+            return;
+        }
         //place in array
         const formValues = {
             card_number: card_number,
@@ -122,7 +133,6 @@ function validateForm() {
                 lettersonly: true
             },
             cvv: {
-
                 required: true,
                 number: true,
                 minlength: 3,

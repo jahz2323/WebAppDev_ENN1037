@@ -9,7 +9,7 @@ $(document).ready(function () {
     validateForm();
 })
 jQuery.validator.addMethod("lettersonly", function (value, element) {
-    return this.optional(element) || /^[a-z\s]+$/i.test(value);
+    return this.optional(element) || /^[a-zA-Z\s]+$/i.test(value);
 });
 //validate email
 jQuery.validator.addMethod("emailcheck", function (value, element) {

@@ -9,6 +9,7 @@ function validateForm(){
     let form = document.getElementById("login-form");
 
     form.addEventListener("submit", function (event) {
+        //prevent form from submitting
         event.preventDefault();
 
         //GET FORM VALUES
@@ -63,6 +64,8 @@ function validateForm(){
         // alert("Login Form submitted");
         form.reset();
     });
+
+    //validate form
     $("#login-form").validate({
         rules: {
             username: {

@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>Shop</title>
     <link href="../stylesheets/Shop.css" rel="stylesheet"></link>
+    <!-- for slideshow, swiper library -->
+    <link href="../libs/swiper-bundle.min.css" rel="stylesheet"> </link>
     <script src="../libs/jquery-3.7.1.min.js"></script>
     <script src="../libs/jquery.validate.min.js"></script>
     <script src="../libs/additional-methods.min.js"></script>
-
+    <script src="../scripts/ShopScripts/Filter.js"></script>
+    <script src="../scripts/ShopScripts/Cart.js"></script>
 </head>
 <body>
 <!-- Header  -->
@@ -44,7 +47,7 @@
                         <h3>Shop</h3>
                     </div>
                     <div class="bubble" id="sub_two">
-                        <svg  xmlns="http://www.w3.org/2000/svg" width="100" height="100"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"
                              viewBox="0 0 100 100" xml:space="preserve">
                             <g transform="translate(0, -85)">
                                 <g>
@@ -68,8 +71,12 @@
                         </h3>
                     </div>
                     <div class="bubble" id="sub_three">
-                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                        <svg  width="800px" height="800px" viewBox="0 0 52 52" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><path d="M38.67,27.35A11.33,11.33,0,1,1,27.35,38.67h0A11.34,11.34,0,0,1,38.67,27.35ZM20.36,37.63a4,4,0,1,1-4,4v0A4,4,0,0,1,20.36,37.63ZM42.8,34.07l-6.06,6.79L34,38.09a.79.79,0,0,0-1.11,0l0,0-1.11,1.07a.7.7,0,0,0-.07,1l.07.08L35.6,44a1.62,1.62,0,0,0,1.14.48A1.47,1.47,0,0,0,37.87,44l7.19-7.87a.83.83,0,0,0,0-1l-1.12-1.05a.79.79,0,0,0-1.11,0ZM8.2,2a2.42,2.42,0,0,1,2.25,1.7h0l.62,2.16H46.36A1.5,1.5,0,0,1,47.9,7.31a1.24,1.24,0,0,1-.06.47h0L43.66,22.43a1.42,1.42,0,0,1-.52.82,16.42,16.42,0,0,0-4.47-.64,16,16,0,0,0-5.47,1H19.36a2.2,2.2,0,0,0-2.22,2.18,2.11,2.11,0,0,0,.13.75h0v.08a2.26,2.26,0,0,0,2.17,1.62h7.1a16,16,0,0,0-2.77,4.61H16a2.32,2.32,0,0,1-2.25-1.7h0L6.5,6.62H4.33A2.37,2.37,0,0,1,2,4.22V4.16A2.46,2.46,0,0,1,4.48,2H8.2Z"/></svg>
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg width="800px" height="800px" viewBox="0 0 52 52" data-name="Layer 1"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M38.67,27.35A11.33,11.33,0,1,1,27.35,38.67h0A11.34,11.34,0,0,1,38.67,27.35ZM20.36,37.63a4,4,0,1,1-4,4v0A4,4,0,0,1,20.36,37.63ZM42.8,34.07l-6.06,6.79L34,38.09a.79.79,0,0,0-1.11,0l0,0-1.11,1.07a.7.7,0,0,0-.07,1l.07.08L35.6,44a1.62,1.62,0,0,0,1.14.48A1.47,1.47,0,0,0,37.87,44l7.19-7.87a.83.83,0,0,0,0-1l-1.12-1.05a.79.79,0,0,0-1.11,0ZM8.2,2a2.42,2.42,0,0,1,2.25,1.7h0l.62,2.16H46.36A1.5,1.5,0,0,1,47.9,7.31a1.24,1.24,0,0,1-.06.47h0L43.66,22.43a1.42,1.42,0,0,1-.52.82,16.42,16.42,0,0,0-4.47-.64,16,16,0,0,0-5.47,1H19.36a2.2,2.2,0,0,0-2.22,2.18,2.11,2.11,0,0,0,.13.75h0v.08a2.26,2.26,0,0,0,2.17,1.62h7.1a16,16,0,0,0-2.77,4.61H16a2.32,2.32,0,0,1-2.25-1.7h0L6.5,6.62H4.33A2.37,2.37,0,0,1,2,4.22V4.16A2.46,2.46,0,0,1,4.48,2H8.2Z"/>
+                        </svg>
                         <h3>
                             Checkout
                         </h3>
@@ -91,7 +98,7 @@
                         </h3>
                     </div>
                     <div class="bubble" id="sub_six">
-                        <svg  height="800px" width="800px" version="1.1" id="Layer_1"
+                        <svg height="800px" width="800px" version="1.1" id="Layer_1"
                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                              viewBox="0 0 330.002 330.002" xml:space="preserve">
                         <g id="XMLID_9_">
@@ -143,57 +150,91 @@
 <div id="Content">
     <div id="Shop_container">
         <h1> Browse all our products! </h1>
-        <div id="Shop_top_container">
-            <!-- slideshow of products -->
-            <div class="slideshow_container">
-                <img src="../images/ShopProducts/Baileys.jpg"></img>
-                <img src="../images/ShopProducts/cadbury.jpg"></img>
-                <img src="../images/ShopProducts/KerryGoldCheese.jpeg"></img>
-                <img src="../images/ShopProducts/Moonju.jpeg"></img>
-
+<!--        <div id="Shop_top_container">-->
+<!--            &lt;!&ndash; slideshow of products &ndash;&gt;-->
+<!--            <div class="slideshow_container">-->
+<!--                <img src="../images/ShopProducts/Baileys.jpg"></img>-->
+<!--                <img src="../images/ShopProducts/cadbury.jpg"></img>-->
+<!--                <img src="../images/ShopProducts/KerryGoldCheese.jpeg"></img>-->
+<!--                <img src="../images/ShopProducts/Moonju.jpeg"></img>-->
+<!--                <img src="../images/ShopProducts/sheep-milk.webp"></img>-->
+<!--                <img src="../images/ShopProducts/lynxFragrance.webp"></img>-->
+<!--            </div>-->
+<!--        </div>-->
+        <!-- OnHover move the slider container -->
+        <div class="container-slides">
+            <div class="image-wrapper">
+                <ul class="image-list">
+                    <li class="image-item">
+                        <img src="../images/ShopProducts/Baileys.jpg" alt="Baileys Irish Coffee Liquor">
+                        <div class="slide-content">
+                            <h2 id="Baileys">New Baileys Irish Coffee Liquor</h2>
+                        </div>
+                    </li>
+                    <li class="image-item">
+                        <img src="../images/ShopProducts/cadbury.jpg" alt="Cadbury Dairy Milk Chocolate">
+                        <div class="slide-content">
+                            <h2 id="CadburyMilkChoc">Cadbury Dairy Milk Chocolate 150g</h2>
+                        </div>
+                    </li>
+                    <li class="image-item">
+                        <img src="../images/ShopProducts/KerryGoldCheese.jpeg" alt="Kerrygold Dubliner Cheese">
+                        <div class="slide-content">
+                            <h2 id="KerrygoldCheese">Kerrygold Dubliner Cheese 500g</h2>
+                        </div>
+                    </li>
+                    <li class="image-item">
+                        <img src="../images/ShopProducts/Moonju.jpeg" alt="Mooju Milk">
+                        <div class="slide-content">
+                            <h2 id="Mooju">Mooju Milk 500ml</h2>
+                        </div>
+                    </li>
+                    <li class="image-item">
+                        <img src="../images/ShopProducts/sheep-milk.webp" alt="Sheep Milk">
+                        <div class="slide-content">
+                            <h2 id="SheepMilk">Sheep Milk 1.5L</h2>
+                        </div>
+                    </li>
+                </ul>
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
         <div id="cart-container">
-            <div id="cart-wrapper">
+            <div class ="cart-content">
                 <h2>Items in Cart:</h2>
                 <div id="products-imgs">
-                    <img src="../images/ShopProducts/coca-cola-bottle-transparent-background-9-903137475.png" alt="Coca-Cola Bottle">
+                    <img src="../images/ShopProducts/coca-cola-bottle-transparent-background-9-903137475.png"
+                         alt="Coca-Cola Bottle">
                 </div>
                 <p>€2.00</p>
-                <a href="../Pages/Orders.html">
-                    <button id="order-btn">Proceed to Orders</button>
-                </a>
-
             </div>
         </div>
+        <a href="../Pages/Orders.html">
+            <button id="order-btn">Proceed to Orders</button>
+        </a>
         <div id="Shop_drop_wrapper">
             <!-- Filter Dropdown -->
             <div class="Shop_dropdown">
                 <h3>Search by Filter</h3>
-                <button class="Shop_dropbtn">Filter</button>
-                <button class="apply-filter">Apply</button>
+                <button class="Shop_dropbtn" id="applyFilter">Filter</button>
                 <div class="Shop_dropdown-content">
-                    <a href="#">Drinks</a>
-                    <a href="#">Snacks</a>
-                    <a href="#">Dairy</a>
-                    <a href="#">Fruit & Veg</a>
-                    <a href="#">Frozen</a>
-                    <a href="#">Household</a>
-                    <a href="#">Health & Beauty</a>
-                    <a href="#">Bakery</a>
-                    <a href="#">Baby</a>
-                    <a href="#">Pet</a>
+                    <button id="filter-dairy">Dairy</button>
+                    <button id="filter-drinks">Drinks</button>
+                    <button id="filter-snacks">Snacks</button>
+                    <button id="filter-health-beauty">Health & Beauty</button>
+                    <button id="filter-alcohol">Alcohol</button>
                 </div>
             </div>
             <!-- Sort Dropdown -->
             <div class="Shop_dropdown">
                 <h3>Sort by</h3>
-                <button class="Shop_dropbtn">Sort</button>
-                <button class="apply-filter">Apply</button>
-                <div class="Shop_dropdown-content">
-                    <a href="#">Price: Low to High</a>
-                    <a href="#">Price: High to Low</a>
-                    <a href="#">Alphabetical</a>
+                <button class="Shop_dropbtn" id ="sortFilter">Sort</button>
+                <div class="Shop_dropdown-sort">
+                    <button id="sort-price-low">Price: Low to High</button>
+                    <button id="sort-price-high">Price: High to Low</button>
+                    <button id="sort-name-asc">Name: A-Z</button>
                 </div>
             </div>
         </div>
@@ -202,75 +243,93 @@
         <div id="Shop_main_container">
             <div id="Product_container">
                 <div id="Product_listings">
-                    <div class="Product">
+                    <div class="Product" id="001">
                         <img src="../images/ShopProducts/Baileys.jpg"></img>
                         <h3>Baileys Irish Cream Liqueur 500ml</h3>
-                        <p>€20.00</p>
+                        <p class="Product-price">€20.00</p>
                         <div class="add-to-cart">
-                            <button>Add to Cart</button>
+                            <button class="add">Add to Cart</button>
                         </div>
                     </div>
 
-                    <div class="Product">
+                    <div class="Product" id="002">
                         <img src="../images/ShopProducts/cadbury.jpg"></img>
                         <h3>Cadbury Dairy Milk Chocolate 150g</h3>
-                        <p>€2.00</p>
+                        <p class="Product-price">€2.00</p>
                         <div class="add-to-cart">
-                            <button>Add to Cart</button>
+                            <button class="add">Add to Cart</button>
                         </div>
                     </div>
 
-                    <div class="Product">
+                    <div class="Product" id="003">
                         <img src="../images/ShopProducts/KerryGoldCheese.jpeg"></img>
                         <h3>Kerrygold Dubliner Cheese 500g</h3>
-                        <p>€3.00</p>
+                        <p class="Product-price">€3.00</p>
                         <div class="add-to-cart">
-                            <button>Add to Cart</button>
+                            <button class="add">Add to Cart</button>
                         </div>
                     </div>
 
-                    <div class="Product">
+                    <div class="Product" id="004">
                         <img src="../images/ShopProducts/Moonju.jpeg"></img>
                         <h3>Mooju Milk 500ml</h3>
-                        <p>€5.00</p>
+                        <p class="Product-price">€5.00</p>
                         <div class="add-to-cart">
-                            <button>Add to Cart</button>
+                            <button class="add">Add to Cart</button>
                         </div>
                     </div>
 
-                    <div class="Product">
+                    <div class="Product" id="005">
                         <img src="../images/ShopProducts/sheep-milk.webp"></img>
                         <h3>Sheep Milk 1.5L</h3>
-                        <p>€6.00</p>
+                        <p class="Product-price">€6.00</p>
                         <div class="add-to-cart">
-                            <button>Add to Cart</button>
+                            <button class="add">Add to Cart</button>
                         </div>
                     </div>
 
-                    <div class="Product">
+                    <div class="Product" id="006">
                         <img src="../images/ShopProducts/lynxFragrance.webp"></img>
                         <h3>Lynx Blue Lavender 500ml</h3>
-                        <p>€5.00</p>
+                        <p class="Product-price">€5.00</p>
                         <div class="add-to-cart">
-                            <button>Add to Cart</button>
+                            <button class="add">Add to Cart</button>
                         </div>
                     </div>
 
-                    <div class="Product">
+                    <div class="Product" id="007">
                         <img src="../images/ShopProducts/fanta_PNG46-3521308670.png"></img>
                         <h3>Fanta Orange 400mL</h3>
-                        <p>€2.00</p>
+                        <p class="Product-price">€2.00</p>
                         <div class="add-to-cart">
-                            <button>Add to Cart</button>
+                            <button class="add">Add to Cart</button>
                         </div>
                     </div>
 
-                    <div class="Product">
+                    <div class="Product" id="008">
+                        <img src="../images/ShopProducts/coca-cola-bottle-transparent-background-9-903137475.png"></img>
+                        <h3>Coca Cola 400mL</h3>
+                        <p class="Product-price">€2.00</p>
+                        <div class="add-to-cart">
+                            <button class="add">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="Product" id="009">
+                        <img src="../images/ShopProducts/sprite_PNG8921-1557318537.png"></img>
+                        <h3>Sprite 400mL</h3>
+                        <p class="Product-price">€2.00</p>
+                        <div class="add-to-cart">
+                            <button class="add">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="Product" id="010">
                         <img src="../images/ShopProducts/Freddo.jpg"></img>
                         <h3>Freddo bar 50g</h3>
-                        <p>€0.20</p>
+                        <p class="Product-price">€0.20</p>
                         <div class="add-to-cart">
-                            <button>Add to Cart</button>
+                            <button class="add">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -278,7 +337,7 @@
         </div>
     </div>
 </div>
-    <!-- Footer  -->
+<!-- Footer  -->
 <footer id="footer" style="font-family: Lato, sans-serif">
     <div class="Socials">
         <p>Follow us on</p>
@@ -302,6 +361,6 @@
 </footer>
 </div>
 <script src="../main.js" type="module"></script>
-
+<script src="../scripts/ShopScripts/slideshow.js"></script>
 </body>
 </html>
